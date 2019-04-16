@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link href="../css/style.css" rel="stylesheet" type="text/css">
+	<script>
+		window.onload = function(){
+			document.getElementById('frm').onsubmit = function(){
+				var id = document.getElementsByName('id')[0];
+				var pw = document.getElementsByName('pw')[0];
+				var pwChk = document.getElementsByName('pwChk')[0];
+				if(id.value.length<3){
+					alert('id는 3글자 이상이어야 합니다');
+					id.focus();
+					return false;
+				}
+				if(pw.value != pwChk.value){
+					alert('비밀번호를 확인하세요');
+					pw.value = '';
+					pwChk.value = ''
+					pw.focus();
+					return false;
+				}
+			};
+		};
+	</script>
+</head>
+<body>
+	<form action="agree.jsp" method="post" id="frm">
+		<table>
+			<tr><th>아이디</th>
+					<td><input type="text" name="id" required="required"></td>
+			</tr>
+			<tr><th>비밀번호</th>
+					<td><input type="password" name="pw" required="required"></td>
+			</tr>
+			<tr><th>비번확인</th>
+					<td><input type="password" name="pwChk" required="required"></td>
+			</tr>
+			<tr><th>이름</th>
+					<td><input type="text" name="name" required="required"></td>
+			</tr>
+			<tr><td colspan="2">
+						<input type="submit" value="가입">
+						<input type="reset" value="취소">
+					</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+
+
+
+
+
+

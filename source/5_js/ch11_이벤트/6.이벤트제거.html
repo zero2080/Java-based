@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    // 이벤트 제거
+    window.onload = function () {
+      var cnt = 0;
+      var btn = document.getElementById('btn');
+      btn.onclick = function () {
+        var result = document.getElementById('result');
+        //alert('클릭은 한번만');
+        if (++cnt < 10) {
+          result.innerHTML += cnt + ' ';
+        } else {
+          btn.onclick = null;//click은 10번으로 제거
+        }
+      };
+    };    
+  </script>
+</head>
+<body>
+  <button id="btn">이 버튼은 한번만 클릭 가능해요</button>
+  <p id="result"></p>
+</body>
+</html>

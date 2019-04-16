@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var arr = ['사과', '바나나', 273, 20.5];
+    //var arr = { '0': '사과', '1': '바나나', '2': 273, '3': 20.5 };
+    for (var idx in arr) {
+      document.write(idx + ':' + arr[idx] + '<br>');
+    }
+    var product = {
+      '제품명': '7D 건조 망고',
+      '유형': '당절임',
+      '성분': '망고, 설탕, 메타중아황상나트륨, 치자황색소',
+      '원산지' : '필리핀'
+    };
+    product['원산지'] = '말레시아';
+    product.원산지 = '제주도';
+    document.write(product.제품명 + '<br>');
+    document.write(product['제품명'] + '<br>');
+    document.write('<hr>');
+    for (var key in product) {
+      document.write(key + ':' + product[key] + '<br>');
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		table td {background-color: #AAFFAA; width: 100px; height: 100px;}
+		.tdClick {background-color: red;}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function(){
+			$('td').click(function(){
+				$('td').removeClass('tdClick'); // 원상복구
+				$(this).addClass('tdClick'); // 클릭한 td태그의 class를 tdClick로 추가
+			});
+		});
+	</script>
+</head>
+<body>
+	<table>
+		<tr><td></td><td></td></tr>
+		<tr><td></td><td></td></tr>
+	</table>
+</body>
+</html>

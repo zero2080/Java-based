@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var x = Number(prompt('x의 y승을 구할거요. x값은?'));
+    var y = Number(prompt('x의 y승을 구할거요. y값은?'));
+    document.write('x의 y승은 ' + power(x, y));
+
+    function power(x, y) { // x의 y승을 return
+      var result = 1;
+      for (var i = 1; i <= y; i++) {
+        result = result * x;
+        // y==1 : result = 1*x => result는 x
+        // y==2 : result = x*x => result는 x의 2승
+        // y==3 : result = x의 2승 * x => result는 x의 3승
+      }
+      return result;
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>

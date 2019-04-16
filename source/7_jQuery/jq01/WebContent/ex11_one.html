@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style></style>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('h2').one('click', function(){
+				$(this).prepend('★').append('★');
+			});
+		});
+		$(function(){
+
+		});
+	</script>
+</head>
+<body>
+	<h1>한번만 이벤트 처리</h1>
+	<h2>서태지 좋아요 클릭은 한번만</h2>
+	<h2>클린턴 좋아요 클릭은 한번만</h2>
+	<h2>오바마 좋아요 클릭은 한번만</h2>
+</body>
+</html>

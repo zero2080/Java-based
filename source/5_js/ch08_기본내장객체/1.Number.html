@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    // int i = 10;
+    // Integer iObj = new Integer(10);
+    // number, string, boolean(기본자료형) object, undefined, function
+    var primitiveNumber = 10; // 객체(참조)변수
+    var objectNumber = new Number(10); //객체(참조)변수
+    Number.prototype.method1 = function () { return 'method1'; };
+    document.write(primitiveNumber.method1() + '<br>');
+    document.write(objectNumber.method1() + '<br>');
+
+    objectNumber.method2 = function () { return 'method2'; };
+    document.write(objectNumber.method2() + '<br>');
+    document.write('<hr>');
+    //document.write(primitiveNumber.method2() + '<br>');
+
+    document.write('primitiveNumber의 타입은 ' + typeof (primitiveNumber));
+    primitiveNumber.method3 = function () { return 'method3'; };
+    document.write(primitiveNumber.method3());
+  </script>
+</head>
+<body>
+</body>
+</html>

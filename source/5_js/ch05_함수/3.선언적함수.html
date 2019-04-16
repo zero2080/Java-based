@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    fun();
+    function fun() {alert('함수A');}
+    function fun() {alert('함수B');} //함수의 재정의
+    
+    document.write(fun);
+    document.write('<br><br>');
+    document.write(prompt); // 내장함수는 소스보기 불가
+    //anonymous_fun(); // 호출불가
+    var anonymous_fun = function () { alert('익명함수A'); };
+    anonymous_fun = function () { alert('익명함수B'); };
+    anonymous_fun(); // 익명함수 정의 후에만 실행 가능
+  </script>
+</head>
+<body>
+</body>
+</html>

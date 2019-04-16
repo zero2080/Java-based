@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker({
+    	dateFormat : 'yy-mm-dd',
+			monthNames : ['1월','2월','3월','4월','5월','6월','7월','8월',
+											'9월','10월','11월','12월'],
+			showMonthAfterYear : true,
+			yearSuffix : '년', // "2019년 3월"
+			showOtherMonths : true, // 다른 달도 화면에 출력
+			dayNamesMin : ['일','월','화','수','목','금','토'],
+			minDate : 0, // 오늘부터 선택가능
+			onSelect : function(dateText){
+				$('button').attr('disabled',false).css('color','black');
+				$('#resultTime').html('');
+				$('#resultDate').html(dateText);
+				var today = new Date(); // 지금 시점(시간+날짜)
+				var y = today.getFullYear(); //y=2019
+				var m = today.getMonth()+1; // m = 3
+				if((''+m).length==1)
+					m = '0'+m;    // m = '03'
+				var d = today.getDate(); // d = 5
+				if((''+d).length==1)
+					d = '0'+d;    // d = '05'
+				var todayStr = y+'-'+m +'-'+d;
+				if(todayStr == dateText){ // 오늘을 선택
+					var h = today.getHours(); // 지금 시간
+					alert('오늘 선택했네 '+h+'시 이후만 예약 가능해');
+					for(var i=9 ; i<=h ; i++){
+						$('.'+i).attr('disabled','disabled').css('color','#dddddd');
+					} // for
+				}//if
+			} // onSelect 콜백함수
+    });//datepicker 함수 끝
+    $('#am button').click(function(){
+    	$('#resultTime').text($('#resultTime').text()+
+    			'오전'+ $(this).attr('id')+'시 ');
+    	$(this).attr('disabled','disabled').css('color','red');
+    });
+    $('#pm button').click(function(){
+    	$('#resultTime').text($('#resultTime').text()+
+    			'오후'+ $(this).attr('id')+'시 ');
+    	$(this).attr('disabled','disabled').css('color','red');
+    });
+  } );
+  </script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>날짜선택 <div id="datepicker"></div></td>
+			<td><div id="am">오전<br>
+						<button id="9" class="9">9시</button><br>
+						<button id="10" class="10">10시</button><br>
+						<button id="11" class="11">11시</button>
+					</div>
+			</td>
+			<td>
+					<div id="pm">오후<br>
+						<button id="12" class="12">12시</button><br>
+						<button id="1" class="13">1시</button><br>
+						<button id="2" class="14">2시</button><br>
+						<button id="3" class="15">3시</button><br>
+						<button id="4" class="16">4시</button><br>
+						<button id="5" class="17">5시</button><br>
+						<button id="6" class="18">6시</button><br>
+						<button id="7" class="19">7시</button><br>
+						<button id="8" class="20">8시</button><br>
+						<button id="9" class="21">9시</button><br>
+						<button id="10" class="22">10시</button><br>
+						<button id="11" class="23">11시</button>
+					</div>
+			</td>
+		</tr>
+	</table>	
+	<p>선택한 날짜 : <span id="resultDate"></span></p>
+	<p>선택한 시간들 : <span id="resultTime"></span></p> 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

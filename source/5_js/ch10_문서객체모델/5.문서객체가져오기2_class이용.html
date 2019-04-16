@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    window.onload = function () {
+      var clock = document.getElementsByClassName('clock');
+      setInterval(function () {
+        clock[0].innerHTML = new Date().toLocaleString();
+        clock[1].value = new Date().toLocaleString();
+      }, 1000);
+    };
+  </script>
+</head>
+<body>
+  <div id="wrap">
+    <h1>시 계</h1>
+    <h2 class="clock"></h2>
+    <input type="text" class="clock" />
+  </div>
+</body>
+</html>

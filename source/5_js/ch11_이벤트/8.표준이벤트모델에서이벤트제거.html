@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    window.onload = function () {
+      var cnt=0;
+      var header = document.getElementById('header');
+      // 이벤트 연결 : addEventListener('이벤트이름',리스너함수);
+      // 이벤트 제거 : removeEventListener('이벤트이름',리스너함수);
+      var handler = function () {
+        this.innerHTML += cnt+' ♡';
+        if (++cnt >= 10) {
+          this.removeEventListener('click', handler);//이벤트제거
+        }
+      };
+      header.addEventListener('click', handler);
+    };
+  </script>
+</head>
+<body>
+  <h1 id="header">Click</h1>
+</body>
+</html>

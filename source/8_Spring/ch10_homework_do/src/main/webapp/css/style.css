@@ -1,0 +1,8 @@
+@charset "UTF-8";
+body {background-color: #FFFFAA; }
+table {width: 200px; margin: 10px auto;}
+#cnt {text-align: right; margin-right:10px; color:red;}
+#buttons {text-align: center;}
+caption {text-align: center;}
+input[type="submit"] {margin: 5px;}
+#name, #id, #kor, #eng, #mat {width:100px; border: 1px solid lightgray;}

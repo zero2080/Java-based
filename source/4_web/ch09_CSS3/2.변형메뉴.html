@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script src="js/prefixfree.min.js"></script>
+  <style>
+    *{margin:0; padding:0;}
+    li{list-style:none;}
+    a {text-decoration:none; color:black; font-size:20px;} /*페이지 초기화*/
+    #gnb {width:600px; height:300px; margin:0 auto;
+          border:1px solid lightgray;
+    }
+    #gnb ul li a{width:100px; height:50px; line-height:50px;
+        margin:5px; background-color:yellow; display:block;
+        padding-left:30px;
+        transition-property: background-color, width;
+        transition-duration:2s, 5s;
+        transition-delay:1s;
+    }
+    #gnb ul li a:hover{width:590px;}
+    #gnb ul li:nth-child(1):hover a{background-color:green;color:yellow;}
+    #gnb ul li:nth-child(2):hover a{background-color:brown; color:white;}
+    #gnb ul li:nth-child(3):hover a{background-color:black; color:white;}
+    #gnb ul li:nth-child(4):hover a{background-color:blue; color:white;}
+    #gnb ul li:nth-child(5):hover a{background-color:red; color:yellow;}
+  </style>
+</head>
+<body>
+  <div id="gnb">
+    <ul>
+      <li><a href="#">GNB_01</a></li>
+      <li><a href="#">GNB_02</a></li>
+      <li><a href="#">GNB_03</a></li>
+      <li><a href="#">GNB_04</a></li>
+      <li><a href="#">GNB_05</a></li>
+    </ul>
+  </div>
+</body>
+</html>

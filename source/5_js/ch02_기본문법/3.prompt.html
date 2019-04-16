@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var kor, eng, nkor, neng, sum, avg;
+    kor = prompt('국어점수는(0~100점사이)?', '');
+    eng = prompt('영어점수는(0~100점 사이)?', '');
+    nkor = Number(kor); // 문자형을 숫자형으로 변환, 변환불가하면 NaN
+    if (isNaN(nkor) || nkor<0 || nkor>100 ) { //nkor이 NaN이면 true
+      nkor = 0;
+    }
+    neng = Number(eng);
+    if (isNaN(neng) || neng<0 || neng>100) {
+      neng = 0;
+    }
+    sum = nkor + neng;
+    avg = sum / 2;
+    document.write('<h1>총점 : '+sum+'  평균 : '+avg+'</h1>');
+  </script>
+</head>
+<body>
+</body>
+</html>

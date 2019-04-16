@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    /* A씨가 만든 함수 */
+    function pythagoras(width, height) { // 빗변을 리턴
+      function square(x) { // 제곱을 리턴 = 내부함수(충돌을 막고자)
+        return x * x;
+      }
+      return Math.sqrt(square(width) + square(height));
+    }
+    /* B씨가 만든 함수 */
+    function square(w, h, hypo) { //직각삼각형이면 true, 아니면 false 리턴
+      if (w * w + h * h == hypo * hypo) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    /* width, height를 가지고 빗변을 출력 */
+    document.write(pythagoras(3, 4));
+  </script>
+</head>
+<body>
+
+</body>
+</html>

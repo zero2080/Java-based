@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>p {text-align: center;}</style>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$.ajax({
+				url : 'empList.jsp',
+				type : 'post', 
+				data : 'schEname=&schJob=',
+				dataType : 'html',
+				success : function(data){
+					$('#show').html(data);
+				}
+			}); // $.ajax()함수
+			$('#schEname').keyup(function(){
+				var schEname = $('#schEname').val();
+				var schJob   = $('#schJob').val();
+				$.ajax({
+					url : 'empList.jsp',
+					type : 'post', 
+					data : 'schEname='+schEname+'&schJob='+schJob,
+					dataType : 'html',
+					success : function(data){
+						$('#show').html(data);
+					}
+				}); // $.ajax()함수
+			}); // #schEname의 keyup 이벤트
+			$('#schJob').keyup(function(){
+				var schEname = $('#schEname').val();
+				var schJob   = $('#schJob').val();
+				var sendData = 'schEname='+schEname+'&schJob='+schJob;
+				$.ajax({
+					url : 'empList.jsp',
+					type : 'post', 
+					data : sendData,
+					dataType : 'html',
+					success : function(data){
+						$('#show').html(data);
+					}
+				}); // $.ajax()함수
+			}); // #schJob의 keyup 이벤트
+		});
+	</script>
+</head>
+<body>
+	<p>
+		이름 <input type="text" id="schEname">
+		직책 <input type="text" id="schJob">
+		<button>검색</button>
+		<div id="show"></div>
+	</p>
+</body>
+</html>
+
+
+
+
+
+
+
+

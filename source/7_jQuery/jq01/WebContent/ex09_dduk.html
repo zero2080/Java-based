@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		table td {background-color: #AAFFAA; width: 100px; height: 100px; text-align: center;}
+		.tdClick {background-color: red;}
+		b{color:blue;}
+		img {opacity: 0; width: 50px;}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function(){
+			// 클릭한 곳만 색상을 변경. 
+			// 클릭한 곳이 떡을 숨긴 곳이라면 축하msg, 아니라면 다음기회에를 출력
+			var ddukIdx = parseInt(Math.random()*9);  // 떡이 있는 곳
+			$('.msg').html('비밀인데 떡이 있는 곳은 <b>'+ddukIdx+'</b>');
+			$('td').click(function(){
+				$('td').removeClass('tdClick'); // 초기화
+				$(this).addClass('tdClick');    // 클릭한 곳만 빨갛게
+				//var idx = Number($(this).text());
+				var idx = Number($(this).attr('id')); // 내가 클릭한 곳
+				if(idx == ddukIdx){
+					$('.msg2').val('축하축하');	
+					//$('.img'+idx).css('opacity','1');
+					//$(this).children(0).eq(1).css('opacity','1');
+					$(this).css('background-image','url("dduk.jpg")').css('background-size','100%');
+					$('td').off(); // 이벤트 제거
+					
+				}else{
+					$('.msg2').val('떡은 다른 곳에 있어요. 다음 기회에..');
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<table>
+		<tr><td id="0">0</td>
+				<td id="1">1</td>
+				<td id="2">2</td></tr>
+		<tr><td id="3">3</td>
+				<td id="4">4</td>
+				<td id="5">5</td></tr>
+		<tr><td id="6">6</td>
+				<td id="7">7</td>
+				<td id="8">8</td></tr>
+	</table>
+	<div class="msg"></div>
+	<input type="text" class="msg2">
+</body>
+</html>
+
+
+
+
+
+

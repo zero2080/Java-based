@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+	<bean id="proxyAop" class="com.tj.ex1.ProxyAop"/>
+	
+	<aop:config>
+		<aop:aspect id="aop" ref="proxyAop">
+			<aop:pointcut expression="within(com.tj.ex1.*)" id="publicMethod"/>
+			<aop:around method="aroundAdvice" pointcut-ref="publicMethod"/>
+			<aop:before method="beforeAdvice" pointcut-ref="publicMethod"/>
+		</aop:aspect>
+		<aop:aspect id="aop" ref="proxyAop">
+			<aop:pointcut expression="execution(public void get*(..))" id="afterM"/>
+			<aop:after method="afterAdvice" pointcut-ref="afterM"/>
+			<aop:after-returning method="afterReturningAdvice" pointcut-ref="afterM"/>
+			<aop:after-throwing method="afterThrowingAdvice" pointcut-ref="afterM"/>
+		</aop:aspect>
+	</aop:config>
+
+	<bean id="student" class="com.tj.ex1.Student">
+		<property name="name" value="홍학생"/>
+		<property name="age" value="14"/>
+		<property name="gradeNum" value="1"/>
+		<property name="classNum" value="5"/>
+	</bean>
+	<bean id="worker" class="com.tj.ex1.Worker">
+		<property name="name" value="김일꾼"/>
+		<property name="age" value="34"/>
+		<property name="job" value="개발자"/>
+	</bean>
+	
+</beans>

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var str = '@abcd@ef';
+    document.write('글씨길이 : ' + str.length + '<br>');
+    document.write('스트링 더하기 : ' + str.concat(str) + '<br>');
+    document.write('부분 글씨 : ' + str.substr(3, 2) + '<br>');
+    document.write('앞에서부터 일치하는 글자 위치 : '
+      + str.indexOf('*') + '<br>');
+    document.write('뒤에서부터 일치하는 글자위치'
+      + str.lastIndexOf('@') + '<br>');
+    document.write('1번째부터 2번째 앞까지 :' + str.slice(1, 2)+'<br>');
+    document.write('str을 다 대문자로 : '+str.toUpperCase()+'<br>');
+    document.write('str='+str)
+  </script>
+</head>
+<body></body>
+</html>

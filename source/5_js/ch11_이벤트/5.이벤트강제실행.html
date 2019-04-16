@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    window.onload = function () {
+      var btnA = document.getElementById('btnA');
+      var btnB = document.getElementById('btnB');
+      btnA.onclick = function () {
+        var countA = document.getElementById('countA');
+        countA.innerHTML = Number(countA.innerHTML) + 1;
+      };
+      btnB.onclick = function () {
+        var countB = document.getElementById('countB');
+        countB.innerHTML = parseInt(countB.innerHTML) + 1;
+        // 이벤트 강제 실행
+        btnA.onclick();
+      };
+    };
+  </script>
+</head>
+<body>
+  <button id="btnA">Button A</button>
+  <button id="btnB">Button B</button>
+  <hr />
+  <h1>Button A - <span id="countA">0</span></h1>
+  <h1>Button B - <span id="countB">0</span></h1>
+</body>
+</html>

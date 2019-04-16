@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    table, input[type='text'], input[type='password']{
+      border:1px solid #385d8a; padding:2px;
+    }
+    input[type='submit'], input[type='button'] {
+      background-color: #385d8a;
+      border: 2px solid #385d8a;
+      color:white; font-size:1.2em;
+      border-radius:3px; padding:3px 10px;
+    }
+    table {width:350px; margin:20px auto; padding:20px 10px;}
+    td, th, h1 {padding:10px;text-align:center;}
+  </style>
+  <script>
+    function chk() {
+      if (frm.mail.value == '' ||
+        frm.mail.value.indexOf('@') == -1 ||
+        frm.mail.value.indexOf('@') == 0 ||
+        frm.mail.value.lastIndexOf('@') ==
+                            frm.mail.value.length - 1) {
+        alert('메일 형식을 확인하세요');
+        frm.mail.focus();
+        return false;
+      }
+      if (!frm.pw.value) {
+        alert('비밀번호를 입력하세요')
+        frm.pw.focus();
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <h1>5.메일체크.html</h1>
+  <form name="frm" onsubmit="return chk()">
+    <table>
+      <tr>
+        <th>메 일</th>
+        <td><input type="text" name="mail" 
+                   placeholder="메일 형식에 맞추세요"/></td>
+      </tr>
+      <tr>
+        <th>비밀번호</th>
+        <td><input type="password" name="pw"/></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="submit" value="로그인" />
+          <input type="button" value="회원가입"
+                 onclick="location.href='4.String.html'" />
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

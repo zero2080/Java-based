@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var now = new Date();//24일
+    document.write(now.toLocaleDateString());
+    // to_XXX : 출력관련
+    // get_XXX : 년,월,일,시,분,초,밀리세컨 등을 가져오기
+    // set_XXX : 년,월,일,시,분,초,밀리세컨 등을 수정하기
+    now.setDate(now.getDate() + 7)
+    document.write(now.toLocaleDateString());
+  </script>
+</head>
+<body>
+
+</body>
+</html>

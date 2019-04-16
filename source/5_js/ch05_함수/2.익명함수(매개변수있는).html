@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var anonymous_fun = function (i) {
+      document.write('매개변수로 받은 값 : ' + i + '<br>');
+    };
+    var i = 10;
+    i = 20;
+    anonymous_fun = function () { alert('재정의했음');};
+    anonymous_fun(i);
+  </script>
+</head>
+<body>
+
+</body>
+</html>

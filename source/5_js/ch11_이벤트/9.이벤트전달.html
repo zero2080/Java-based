@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    #a {border:1px solid red; padding:10px;}
+    #b {border:1px solid green; padding:10px;}
+    #h {border:1px solid blue; padding:10px;}
+  </style>
+</head>
+<body>
+  <div id="a" onclick="alert('a영역');">
+    a 영역(RED)
+    <div id="b" onclick="alert('a, b영역');">
+      a, b영역(GREEN)
+      <h1 id="h" onclick="alert('a, b, h영역');">
+        a, b, h영역(BLUE)
+      </h1>
+    </div>
+  </div>
+</body>
+</html>

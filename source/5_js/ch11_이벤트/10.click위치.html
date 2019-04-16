@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    img {position:absolute; display:none;}
+  </style>
+  <script>
+    window.onclick = function () {
+      //alert('스크린 좌표값 : ' + event.screenX + ', ' + event.screenY + '\n'
+      //  + 'offset좌표값 : ' + event.offsetX + ', ' + event.offsetY);
+      var pos = document.getElementById('position');
+      pos.innerHTML = event.offsetX + ', ' + event.offsetY;
+      var img = document.getElementsByTagName('img')[0];
+      img.style.display = 'inline';
+      img.style.left = event.offsetX + 'px';
+      img.style.top = event.offsetY + 'px';
+    };
+  </script>
+</head>
+<body>
+  <h2>클릭한 곳의 좌표값 : <span id="position">클릭하면 나와</span></h2>
+  <img src="img/car.gif" alt="마차" />
+</body>
+</html>

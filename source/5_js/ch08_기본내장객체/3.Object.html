@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    Object.prototype.test = function () { alert('test'); };
+    var numObj = new Number(20);
+    numObj.test();
+    var num = 11; // new Number(11);
+    num.test();
+    if (typeof (num) == 'number') {
+      document.write('num은 number형입니다');//★
+    }
+    if (typeof (numObj) == 'number') {
+      document.write('numObj은 number형입니다');
+    }
+    if (num.constructor == Number) {
+      document.write('num은 Number객체형입니다');//★
+    }
+    if (numObj.constructor == Number) {
+      document.write('numObj은 Number객체형입니다');//★
+    }
+    // Object 내장객체의 함수들
+    var obj = { property: 273 };
+    document.write('<hr>obj객체안에 "property"라는 속성이 있니'
+      + obj.hasOwnProperty('property') + '<br>');
+    document.write('반복문에 확인될 속성이니?'
+      + obj.propertyIsEnumerable('property') + '<br>');
+    for (var key in obj) {
+      document.write(key +':'+obj[key])
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>

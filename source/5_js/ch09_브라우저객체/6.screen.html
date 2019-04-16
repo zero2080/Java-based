@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var child = window.open('', '', 'width=1, height=1');
+    if (!child) {
+      alert('팝업차단 푸세요. 자꾸 이런 예제 할꺼여요');
+    } else {
+      child.document.write('<h1 style="text-align:center;">child창</h1>');
+    }
+    var childWidth = screen.width / 2;
+    var childHeight = screen.height / 2;
+    child.resizeTo(childWidth, childHeight);
+    var childLeft = screen.width / 4;
+    var childTop = screen.height / 4;
+    child.moveTo(childLeft, childTop);
+    var toggle = 0;
+    setInterval(function () {
+      if (toggle == 0) {
+        child.moveBy(50, 50);
+        toggle = 1;
+      } else {
+        child.moveBy(-50, -50);
+        toggle = 0;
+      }
+    }, 500);
+
+    var cnt = 0;
+    for (var key in screen) {
+      document.write(++cnt + '. '+key+' : '+screen[key]+'<br>');
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#wrap { width:500px; margin: 0 auto; text-align: center;}
+	table {width: 100%; height: 300px;}
+	table td {background-color: gray; text-align: center;}
+	.orange {background-color: orange;}
+</style>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		var td = [];       // td태그의 background
+		var orangeCnt = 0; // 오렌지 갯수
+		$('td').each(function(index, item){
+			if(parseInt(Math.random()*2)==0){
+				td[index] = 'orange';
+				$(this).addClass('orange');
+				orangeCnt ++;
+			}else{
+				td[index] = 'gray';
+			}
+		});
+		$('button').click(function(){
+			$('td').removeClass('orange');
+			$('h2').text('오렌지 '+orangeCnt+'개를 잘 찾아봐');
+			$(this).text('게임중');
+		});
+		$('td').click(function(){
+			/* 클릭한 곳의 위치를 가져와, td[위치]가 'orange'면 
+			   addClass('orange')와 함께 그 td는 click 안 되게 -> orangeCnt 감소 
+			    ->orangeCnt가 0인지 보고 0이 아니면 h2에 메세지 수정, 0이면 게임종료
+			 td[위치]가 'gray'면 alert('오렌지가 아냐');*/
+			if($('button').text()=='게임중'){
+				if(td[$(this).attr('id')]=='orange'){
+					$(this).addClass('orange');
+					$(this).off();
+					orangeCnt--;
+					if(orangeCnt!=0){ 
+						$('h2').text('오렌지 '+orangeCnt+'개를 잘 찾아봐');
+					}else{
+						$('h2').text('오렌지를 다 찾음. 잠시 후 사라져');
+						$('button').text('게임종료');
+						$('button').attr('disabled','disabled');// 버튼을 disabled
+						//$('button').off();
+						$('td').off();
+						setTimeout(function(){$('table').hide('slow');},2000);
+					}
+				}else{
+					alert('오렌지 찾기 실패');
+				}// if
+			}// 게임중일 때만 td 클릭 가능 / 게임중이 아닐 때는 td 클릭 안 먹게
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<button>게임시작</button>
+		<h2>위치 기억 후 게임시작 클릭</h2>
+		<table>
+			<tr><td id="0">0</td><td id="1">1</td><td id="2">2</td><td id="3">3</td></tr>
+			<tr><td id="4">4</td><td id="5">5</td><td id="6">6</td><td id="7">7</td></tr>
+			<tr><td id="8">8</td><td id="9">9</td><td id="10">10</td><td id="11">11</td></tr>
+			<tr><td id="12">12</td><td id="13">13</td><td id="14">14</td><td id="15">15</td></tr>
+		</table>
+	</div>
+	<p></p>
+</body>
+</html>

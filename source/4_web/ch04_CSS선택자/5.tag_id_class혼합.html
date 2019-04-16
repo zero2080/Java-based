@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    div {border:1px solid gray;}
+    #header {
+      width:600px; margin:10px auto; /*#header를 화면 가운데 정렬*/
+      background-color:yellow; 
+      text-align:center; /*#header안의 text,img를 가운데 정렬*/
+    }
+    #wrap{
+      width:600px; margin:2px auto; /*위, 우, 하, 좌*/
+      background-color:aquamarine;
+      text-align:center;
+      overflow:hidden; /* 자식단에 float속성을 쓰면 부모단에 overflow 셋팅*/
+    }
+    #content {width:320px; float:left;} /*차지공간: 322px(width+border)*/
+    #side_banner{width:276px; float:right;}/*차지공간:278px(width+border)*/
+    #footer{
+      clear:both; /*앞의 float속성이 제거*/
+      width:600px; margin: 0 auto; background-color:yellow;
+      text-align:center;
+    }
+    ul li.cls{color:orange; font-size:25px; font-weight:bold;/*진하게*/}
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1>HEADER</h1>
+  </div>
+  <div id="wrap">
+    <div id="content">
+      <h1>CONTENT</h1>
+      <ul>
+        <li class="cls">menu1</li><li>menu2</li><li class="cls">menu3</li>
+      </ul>
+      <ol>
+        <li class="cls">menu1</li><li>menu2</li><li class="cls">menu3</li>
+      </ol>
+    </div>
+    <div id="side_banner">
+      <h1>BANNER</h1>
+      <img src="http://tjoeunit.co.kr/index/images/logoit.png" alt="배너" />
+    </div>
+  </div>
+  <div id="footer">
+    <p class="cls">서울시 종로구 삼일대로 17길 51</p>
+  </div>
+</body>
+</html>

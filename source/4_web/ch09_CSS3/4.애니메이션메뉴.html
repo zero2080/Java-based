@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script src="js/prefixfree.min.js"></script>
+  <style>
+    *{margin:0; padding:0;}
+    li{list-style:none;}
+    a {text-decoration:none; color:black;} /*페이지 초기화*/
+    #wrap{width:1000px; margin:0 auto; position:relative;}
+    #wrap #lnb ul li a{
+      width:100px; display:block;
+      padding:10px 30px; background-color:yellow;
+      margin:5px;
+    }
+    #wrap #lnb ul li a:hover{
+      animation-name:ani1;
+      animation-duration:3s;
+      animation-iteration-count:infinite;
+      animation-direction:alternate;
+    }
+    @keyframes ani1{
+      from{width:100px;}
+      to{width:900px;  background-color:red; color:yellow;}
+    }
+    #wrap #rect{
+      position:absolute; left:0px; top:250px;
+      background-color:red;
+      width:100px; height:100px; line-height:100px; text-align:center;
+      animation-name:ani2;
+      animation-duration:3s;
+      animation-iteration-count:infinite;
+      animation-direction:alternate;
+    }
+    #wrap #rect:hover{animation-play-state:paused;}
+    @keyframes ani2{
+      from{left:0;    
+           transform:rotate(0deg);
+      }
+      to{  left:700px;width:200px; height:200px; line-height:200px;
+           transform:rotate(270deg);
+           background-color:blue;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="lnb">
+      <ul>
+        <li><a href="#">lnb01</a></li>
+        <li><a href="#">lnb02</a></li>
+        <li><a href="#">lnb03</a></li>
+        <li><a href="#">lnb04</a></li>
+        <li><a href="#">lnb05</a></li>
+      </ul>
+    </div>
+    <div id="rect">RECT</div>
+  </div>
+</body>
+</html>

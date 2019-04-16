@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var btnImg = ['img/but1.gif', 'img/but2.gif'];
+    function btn(n) {
+      var img = document.getElementsByTagName('img')[0];
+      img.src = btnImg[n];
+      //img.setAttribute('src', btnImg[n]);
+    }
+  </script>
+</head>
+<body>
+  <img src="img/but1.gif" alt="클릭전그림" 
+       onmousedown="btn(1);" onmouseup="btn(0);"/>
+</body>
+</html>

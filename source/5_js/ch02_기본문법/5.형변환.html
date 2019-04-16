@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var str = '100';
+    var i = Number(str);
+    document.write("<h2>Number('100')</h2>");
+    document.write('str 값은' + str + ' 타입은 ' + typeof (str)+'<br>');
+    document.write('i 값은 ' + i + ' 타입은 ' + typeof (i));
+    i = parseInt(str);
+    document.write("<h2>i = parseInt('100');</h2>");
+    document.write('str 값은' + str + ' 타입은 ' + typeof (str) + '<br>');
+    document.write('i 값은 ' + i + ' 타입은 ' + typeof (i));
+    str = '100점';
+    i = Number(str);
+    document.write("<h2>Number('100점')</h2>");
+    document.write('str 값은' + str + ' 타입은 ' + typeof (str) + '<br>');
+    document.write('i 값은 ' + i + ' 타입은 ' + typeof (i));
+    i = parseInt(str);
+    document.write("<h2>parseInt('100점')</h2>");
+    document.write('str 값은' + str + ' 타입은 ' + typeof (str) + '<br>');
+    document.write('i 값은 ' + i + ' 타입은 ' + typeof (i));
+    str = 'f';
+    i = parseInt(str, 16);
+    document.write("<h2>parseInt('f', 16)</h2>");
+    document.write('str 값은' + str + ' 타입은 ' + typeof (str) + '<br>');
+    document.write('i 값은 ' + i + ' 타입은 ' + typeof (i));
+    str = 'f점';
+    i = parseInt(str, 16);
+    document.write("<h2>parseInt('f점', 16)</h2>");
+    document.write('str 값은' + str + ' 타입은 ' + typeof (str) + '<br>');
+    document.write('i 값은 ' + i + ' 타입은 ' + typeof (i));
+  </script>
+</head>
+<body>
+</body>
+</html>

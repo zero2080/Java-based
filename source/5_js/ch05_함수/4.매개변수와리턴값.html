@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var fun = function (i) {
+      alert('리턴값이 없는 함수 호출 됨', 2, 3, 4);
+      //return i;
+    };
+    var value = fun(10);//필요이상의 매개변수는 무시,
+    // 매개변수가 부족할 때는 undefined
+    // return 값이 없을 경우 value에 undefined
+    alert(value);
+  </script>
+</head>
+<body></body>
+</html>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    function openTest() {
+      var child = window.open('http://www.daum.net', 'winTest',
+        'width=600, height=400');
+      if (!child) {
+        alert('팝업 차단 해제하셔요');
+      }
+    }
+  </script>
+</head>
+<body>
+  <button onclick="openTest()">새창띄우기</button>
+  <br /><br />
+  <a href="http://www.naver.com" 
+     target="winTest">새창의 경로 네이버로 바꾸기</a>
+</body>
+</html>

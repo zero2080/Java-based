@@ -1,0 +1,4 @@
+AB
+ABAB
+ABid 127.0.1.2 testet 
+id 127.0.1.2 testet 

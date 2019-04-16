@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var now = new Date();
+    var week = now.getDay();
+    switch (week) {
+      case 0: document.write('일요일');
+        document.body.style.backgroundColor = 'red'; break;
+      case 1: document.write('월요일');
+        document.body.style.backgroundColor = 'orange'; break;
+      case 2: document.write('화요일');
+        document.body.style.backgroundColor = 'yellow';
+        document.body.style.color = 'blue';break;
+      case 3: document.write('수요일'); 
+        document.body.style.backgroundColor = 'green'; break;
+      case 4: document.write('목요일'); 
+        document.body.style.backgroundColor = 'blue'; break;
+      case 5: document.write('금요일'); 
+        document.body.style.backgroundColor = 'navy'; break;
+      case 6: document.write('토요일'); 
+        document.body.style.backgroundColor = 'purple'; break;
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>

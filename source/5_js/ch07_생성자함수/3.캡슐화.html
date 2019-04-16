@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    function Rectangle(w, h) {
+      var width;
+      try {
+        if (w >= 0) {
+          width = w;
+        } else {
+          throw '음수 가로 길이는 없습니다';
+        }
+      } catch(exception) {
+        location.href = '공사중.html';
+      }
+      var height = h;
+      this.getWidth = function () { return width; };
+      this.getHeight = function () { return height; };
+      this.setWidth = function (w) { width = w; };
+      this.setHeight = function (h) { height = h;}
+    }
+    Rectangle.prototype.getArea = function () {
+      return this.getWidth() * this.getHeight();
+    };
+    var rect1 = new Rectangle(-3, 5);
+    rect1.setWidth(6);
+    document.write(rect1.getWidth() + '*' + rect1.getHeight() + '='
+                                    + rect1.getArea());
+  </script>
+</head>
+<body>
+
+</body>
+</html>

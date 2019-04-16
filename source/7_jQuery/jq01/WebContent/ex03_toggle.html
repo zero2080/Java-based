@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		#wrap {width:200px; margin: 0 auto;}
+		#show {width: 200px; height: 200px; background-color: red;}
+		button { width: 100px; height: 50px; text-align: center;
+			line-height: 50px; border-radius:10px; 
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#goShow').on('click', function(){
+				$('#show').show('fast');
+			});
+			$('#goHide').click(function(){
+				$('#show').hide('slow');
+			});
+			$('button').click(function(){
+				$('#show').toggle('slow');
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<button>토글링</button>
+		<h1 id="goShow">보이게 해</h1>
+		<h1 id="goHide">사라져</h1>
+		<div id="show"></div>
+	</div>
+</body>
+</html>

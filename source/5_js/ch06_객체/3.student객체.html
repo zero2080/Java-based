@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var student = {
+      name: '연하진',
+      kor: 92, mat: 98, eng: 96, sci: 98,
+      output : '객체안에도 output',
+      getSum : function () {
+        return this.kor + this.mat + this.eng + this.sci;
+      },
+      getAvg: function () {
+        return this.getSum() / 4;
+      }
+    };
+    // student객체 안에 'name'이라는 속성이 내포되어 있냐?
+    document.write('getSum' in student);
+    var output = '';
+    with (student) {
+      window.output += 'name : ' + name + '<br>';
+      window.output += 'kor : ' + kor + '<br>';
+      window.output += 'mat : ' + mat + '<br>';
+      window.output += 'eng : ' + eng + '<br>';
+      window.output += 'sci : ' + sci + '<br>';
+      window.output += 'output:' + output;
+    }
+    document.write(output);
+  </script>
+</head>
+<body>
+</body>
+</html>

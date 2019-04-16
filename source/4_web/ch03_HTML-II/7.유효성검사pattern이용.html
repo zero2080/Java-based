@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+</head>
+<body>
+  <p>전송안되는 것 <input type="text" name="nosend" id="top" value="들어가나"/></p>
+  <form action="http://www.naver.com">
+    <p>전화 <input type="text" name="tel" placeholder="000-0000-0000"
+                 pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}"
+                 title="XX-XXX-XXXX 또는 XXX-XXXX-XXXX"
+                 required="required"/></p>
+    <p>카드 <input type="text" name="cardno" 
+                 placeholder="0000-0000-0000-0000"
+                 pattern="\d{4}-\d{4}-\d{4}-\d{4}"
+                 title="카드번호는 반드시 0000-0000-0000-0000" /></p>
+    <p>업무 <select name="job">
+                <option>분석</option><option>설계</option>
+                <option>개발구현</option><option>테스트</option>
+                <option>유지보수</option>
+            </select>
+    </p>
+    <p>업무 <input type="text" list="jobdata" name="job2" />
+            <datalist id="jobdata">
+                <option>분석</option><option>설계</option>
+                <option>개발구현</option><option>테스트</option>
+                <option>유지보수</option>
+            </datalist>
+    </p>
+    <center><input type="submit" value="전송합니다" /></center>
+    <a href="#top">맨위로</a>
+  </form>
+</body>
+</html>

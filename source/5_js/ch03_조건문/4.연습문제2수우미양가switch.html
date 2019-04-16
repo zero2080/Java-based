@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var kor, eng, mat, nKor, nEng, nMat, avg;
+    do {
+      kor = prompt('국어점수를 입력');
+      nKor = Number(kor);
+      if (kor != '' && !isNaN(nKor) && nKor>=0 && nKor<=100) break;
+    } while (true);
+    do {
+      eng = prompt('영어점수를 입력');
+      nEng = Number(eng);
+      if (eng != '' && !isNaN(nEng) && nEng >= 0 && nEng<=100) break;
+    } while (true);
+    do {
+      mat = prompt('수학점수를 입력');
+      nMat = Number(mat);
+      if (mat != '' && !isNaN(nMat) && nMat >= 0 && nMat<=100) break;
+    } while (true);
+    avg = (nKor + nEng + nMat) / 3;
+    document.write('국어 : ' + kor + '<br>');
+    document.write('영어 : ' + eng + '<br>');
+    document.write('수학 : ' + mat + '<br>');
+    document.write('평균 : ' + avg + '<br>');
+    switch (Math.trunc(avg / 10)) {
+      case 10:
+      case 9: document.write("수"); break;
+      case 8: document.write("우"); break;
+      case 7: document.write("미"); break;
+      case 6: document.write("양"); break;
+      default:
+        document.write("가"); break;
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>

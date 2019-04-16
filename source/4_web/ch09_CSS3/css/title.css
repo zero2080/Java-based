@@ -1,0 +1,9 @@
+﻿/* css/title.css */
+#wrap #title {
+    background-color: lightgoldenrodyellow;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    text-decoration: underline;
+}
+#wrap #title hr{margin:5px 20px;}

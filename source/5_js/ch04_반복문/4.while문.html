@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    // 1초동안 while문을 몇번 돌까?
+    var cps = 0;
+    var startTime = new Date().getTime();//시작시점의 밀리세컨
+    while (new Date().getTime() < startTime + 1000) {
+      cps++;
+    }
+    document.write('1초동안 while문을 ' + cps + '번 수행');
+  </script>
+</head>
+<body>
+
+</body>
+</html>

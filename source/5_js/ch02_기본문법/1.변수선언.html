@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var varStr;//undefined
+    alert('varStr=' + varStr + ' / 타입은 ' + typeof (varStr));
+    varStr = 10;//number(숫자형)
+    alert('varStr=' + varStr + ' / 타입은 ' + typeof (varStr));
+    varStr = 10.98;
+    alert('varStr=' + varStr + ' / 타입은 ' + typeof (varStr));
+    varStr = 'string';//string(문자형)
+    alert('varStr=' + varStr + ' / 타입은 ' + typeof (varStr));
+    varStr = true; //boolean(불형)
+    alert('varStr=' + varStr + ' / 타입은 ' + typeof (varStr));
+    varStr = function chk() { alert('xx'); }; //function(함수형)
+    alert('varStr=' + varStr + ' / 타입은 ' + typeof (varStr));
+    varStr = { 'name': '홍길동', 'age': 20 };//object(객체형)
+    alert('varStr=' + varStr + ' / 타입은 ' + typeof (varStr));
+    varStr = [12.2, 270, 'str', function () { }]; // object(배열은 객체형)
+    alert('varStr=' + varStr + ' / 타입은 ' + typeof (varStr));
+  </script>
+</head>
+<body>
+
+</body>
+</html>

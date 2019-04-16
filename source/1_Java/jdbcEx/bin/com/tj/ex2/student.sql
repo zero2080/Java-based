@@ -1,0 +1,50 @@
+-- 테이블 DROP
+DROP TABLE STUDENT;
+DROP TABLE MAJOR;
+-- 테이블 생성
+CREATE TABLE MAJOR(
+    mNO NUMBER(1,0),
+    mNAME VARCHAR2(30) NOT NULL,
+    PRIMARY KEY(MNO));
+INSERT INTO MAJOR VALUES (1, '컴퓨터공학');
+INSERT INTO MAJOR VALUES (2, '경영정보');
+INSERT INTO MAJOR VALUES (3, '산업디자인');
+INSERT INTO MAJOR VALUES (4, '실용음악');
+INSERT INTO MAJOR VALUES (5, '디지털콘텐츠');
+
+CREATE TABLE STUDENT(
+    sNO VARCHAR2(10),
+    sNAME VARCHAR2(50) NOT NULL,
+    mNO NUMBER(1,0),
+    SCORE NUMBER(3,0) DEFAULT 0 NOT NULL,
+    sEXPEL NUMBER(1,0) DEFAULT 0 NOT NULL,
+    PRIMARY KEY(SNO),
+    FOREIGN KEY(MNO) REFERENCES MAJOR(MNO),
+    CHECK(SCORE>=0 AND SCORE<=100),
+    CHECK(sEXPEL=0 OR sEXPEL=1));
+-- 1. 학번 검색 (학번, 이름, 전공명(전공번호), 점수)
+SELECT S.*, mNAME FROM STUDENT S, MAJOR M WHERE S.MNO=M.MNO AND sNO='201901';
+-- 2. 이름 검색 (학번, 이름, 전공명(전공번호), 점수)
+SELECT S.*, mNAME FROM STUDENT S, MAJOR M WHERE S.MNO=M.MNO AND sNAME='홍길동';
+-- 3. 전공 검색 (학번, 이름, 전공명(전공번호), 점수)
+SELECT S.*, mNAME FROM STUDENT S, MAJOR M WHERE S.MNO=M.MNO AND MNAME='컴퓨터공학';
+-- 4. 학생 입력 (학번, 이름, 전공명, 점수)
+INSERT INTO STUDENT (sNO, sNAME, mNO, SCORE) VALUES
+    ('201902','홍길순', (SELECT mNO FROM MAJOR WHERE mNAME='경영정보'),96);
+INSERT INTO STUDENT (sNO, sNAME, mNO, SCORE) VALUES
+    ('201901','홍길동',1,100);
+SELECT * FROM STUDENT;
+-- 5. 학생수정 (학번을 보고, 이름, 전공명, 점수 수정)
+UPDATE STUDENT SET sNAME='홍길똥', mNO=(SELECT mNO FROM MAJOR WHERE mNAME='경영정보'),
+        SCORE=99
+    WHERE sNO='201901';
+-- 6. 학생출력 (제적자제외 학번, 이름, 전공명(전공번호), 점수)
+SELECT S.*, mNAME FROM STUDENT S, MAJOR M WHERE S.mNO=M.mNO AND sEXPEL=0;
+-- 7. 제적처리 (학번을 보고 그 학생 제적자 처리)
+UPDATE STUDENT SET sEXPEL=1 WHERE sNO='201902';
+-- 8. 제적자 출력 (제적자만 학번, 이름, 전공명(전공번호), 점수, 제적상태)
+SELECT S.*, mNAME FROM STUDENT S, MAJOR M WHERE S.mNO=M.mNO AND sEXPEL=1;
+--0. 전공명 검색
+SELECT MNAME FROM MAJOR;
+select * from student;
+commit;

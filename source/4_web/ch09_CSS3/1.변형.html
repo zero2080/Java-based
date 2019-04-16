@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script src="js/prefixfree.min.js"></script>
+  <style>
+    #wrap{width:500px; margin:0 auto;}
+    #wrap #rec {width:100px; height:100px;
+          text-align:center; line-height:100px;
+          background-color:red;
+          transition-duration:3s;/* 3초동안 변형 속성*/
+          transition-delay:1s; /*1초후 변형 속성*/
+          transition-timing-function:ease-in;/*처음엔 느리다가 점점 빠르게*/
+          /*transition-timing-function:ease-out;처음엔 빠르다 점점 느리게*/
+    }
+    #wrap #rec:hover{width:500px; background-color:blue;}
+    #wrap #rec:active { width:200px; height:200px;
+            background-color:green; border-radius:100px 0;
+            line-height:200px;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="rec">rec</div>
+  </div>
+</body>
+</html>

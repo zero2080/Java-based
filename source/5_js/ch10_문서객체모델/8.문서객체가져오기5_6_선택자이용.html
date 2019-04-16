@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    window.onload = function () {
+      var h1 = document.querySelector('.h');// .h중 첫번째만
+      var h = document.querySelectorAll('.h'); // .h 다
+      h1.style.color = 'red';
+      for (var idx in h) {
+        h[idx].innerHTML = '첨부터 바꿔';
+      }
+    };
+  </script>
+</head>
+<body>
+  <h1 class="h">HEADER</h1>
+  <h1 class="h">HEADER</h1>
+</body>
+</html>

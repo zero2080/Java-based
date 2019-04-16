@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var hak = Number(prompt('학점을 입력하세요'));
+    if (hak >= 4.0 && hak <= 4.5) {
+      document.write('A학점');
+    } else if (hak >= 3.0 && hak < 4.0) {
+      document.write('B학점');
+    } else if (hak >= 2.0 && hak < 3.0) {
+      document.write('C학점');
+    } else if (hak >= 0.0 && hak < 2.0) {
+      document.write('분발하세요');
+    } else {
+      document.write('유효하지 않은 학점'); 
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>

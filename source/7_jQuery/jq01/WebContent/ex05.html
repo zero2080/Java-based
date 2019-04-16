@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style></style>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			/* $('tr:even').css('background-color','#cccccc');
+			$('tr:odd').css('background','#ffffaa'); */
+			$('tr:nth-child(3n)').css('background','#FFFFAA');
+			$('tr:nth-child(3n+1)').css('background','#FFAAFF');
+			$('tr:nth-child(3n+2)').css('background','#AAFFFF');
+			$('tr:eq(0)').css('background','black').css('color','white');
+		});
+		$(function(){
+
+		});
+	</script>
+</head>
+<body>
+	<table>
+		<tr><th>이름</th><th>혈액형</th><th>지역</th></tr>
+		<tr><td>홍길동</td><td>AB</td><td>서울</td></tr>
+		<tr><td>마길동</td><td>O</td><td>인천</td></tr>
+		<tr><td>윤길동</td><td>A</td><td>안양</td></tr>
+		<tr><td>홍길동</td><td>AB</td><td>서울</td></tr>
+		<tr><td>마길동</td><td>O</td><td>인천</td></tr>
+		<tr><td>윤길동</td><td>A</td><td>안양</td></tr>
+	</table>
+</body>
+</html>

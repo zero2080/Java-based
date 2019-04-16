@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		table {background-color: yellow;}
+		tr{background-color: #FFFFAA;}
+		tr:hover { background-color: orange;}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('tr').click(function(){
+				alert('클릭한 곳의 글번호는 '+$(this).children(0).eq(0).text());
+				location.href = 'ex05.html?no='+$(this).children(0).eq(0).text();
+			});
+		});
+		$(function(){
+
+		});
+	</script>
+</head>
+<body>
+	<table>
+		<tr><th>글번호</th><th>제목</th><th>글쓴이</th><th>조회수</th></tr>
+		<tr><td><b>6</b></td><td>제목6</td><td>서울</td><td>10</td></tr>
+		<tr><td>5</td><td>제목5</td><td>인천</td><td>10</td></tr>
+		<tr><td>4</td><td>제목4</td><td>안양</td><td>10</td></tr>
+		<tr><td>3</td><td>제목3</td><td>서울</td><td>10</td></tr>
+		<tr><td>2</td><td>제목2</td><td>인천</td><td>10</td></tr>
+		<tr><td>1</td><td>제목1</td><td>안양</td><td>10</td></tr>
+	</table>
+</body>
+</html>
+
+
+
+

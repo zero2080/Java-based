@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    window.onload = function () {
+      var header = document.getElementById('header');
+      var whenClick = function () {
+        alert('클릭했구만');
+      };
+      header.onclick = whenClick; // 이벤트 연결
+      // 이벤트이름:click, 이벤트속성:onclick, 이벤트리스너:whenClick
+    };
+  </script>
+</head>
+<body>
+  <h1 id="header">Click</h1>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    function removeH1() {
+      var h1 = document.getElementById('header');
+      //h1 = document.getElementsByTagName('h1')[0];
+      //h1 = document.querySelector('h1');
+      //h1 = document.querySelector('#header');
+      //h1 = document.querySelectorAll('#header')[0];
+      document.body.removeChild(h1);
+    }
+  </script>
+</head>
+<body>
+  <h1 id="header">HEADER</h1>
+  <button onclick="removeH1()">HEADER 제거하기</button>
+</body>
+</html>

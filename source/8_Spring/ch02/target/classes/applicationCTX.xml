@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="calculation" class="com.tj.ex.Calculation"/>
+	
+	<bean id="myCalculation" class="com.tj.ex.MyCalculation">
+		<property name="calculation"> 
+			<ref bean="calculation"/>  <!-- 다른 빈 객체 참조 -->
+		</property>
+		<property name="firstNum">
+			<value>10</value>			<!-- 기본데이터 타입 셋팅 -->
+		</property>
+		<property name="secondNum">
+			<value>2</value>
+		</property>
+	</bean>
+</beans>

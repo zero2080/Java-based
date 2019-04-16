@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var arr = [10, 20, 30];
+    //var obj = { 'name': '홍길동', 'age': 20, 'addr': '서울' };
+    //일반for
+    for (var idx = 0; idx < arr.length; idx++) {
+      document.write('arr[' + idx + '] = ' + arr[idx] + '<br>');
+    }
+    // for - in문 
+    for (var idx in arr) {
+      document.write('arr[' + idx + '] = ' + arr[idx] + '<br>');
+    }
+    // forEach 문
+    arr.forEach(function (data, idx) {
+      document.write('arr[' + idx + ']= ' + data + '<br>');
+    });
+    arr.forEach(function (data) {
+      document.write(data + '<br>');
+    });
+  </script>
+</head>
+<body>
+
+</body>
+</html>

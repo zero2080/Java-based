@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    #wrap { width:450px; margin:0 auto; border:1px solid gray;}
+    input { color:green; font-size:30px; font-weight:bold;    }
+    input[name=pw] {color:black;}
+    input[type^=te] {color:orange; width:300px;} /* 'te'로 시작되는 속성 */
+    input[type$=el] {color:red;} /* 'ㅣ'로 끝나는 속성*/
+    img[alt]{
+      border: 5px solid blue;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <form>
+      <p>이름 <input type="text" name="name" /></p>
+      <p>아뒤 <input type="text" name="id" /></p>
+      <p>비번 <input type="password" name="pw"/></p>
+      <p>전화 <input type="tel" name="tel" /></p>
+      <p><input type="submit" value="전송" /></p>
+      <img src="sulhyun.jpg" alt="sulhyun" />
+    </form>
+  </div>
+</body>
+</html>

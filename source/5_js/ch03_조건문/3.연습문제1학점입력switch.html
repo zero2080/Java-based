@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var hak = Number(prompt('학점을 입력하세요'));
+    var tempHak = (hak== 4.5) ? hak - 0.01 : hak;
+    switch (Math.trunc(tempHak / 0.5)) {
+      case 8:
+        document.write('점수는 '+hak+'- A학점'); break;
+      case 7: case 6:
+        document.write('점수는 ' + hak +'- B학점'); break;
+      case 5: case 4:
+        document.write('점수는 ' + hak +'- C학점'); break;
+      case 3: case 2: case 1: case 0:
+        document.write('점수는 ' + hak +'- 분발하세요'); break;
+      default:
+        document.write('점수는 ' + hak +'- 유효하지 않은 학점'); break;
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>

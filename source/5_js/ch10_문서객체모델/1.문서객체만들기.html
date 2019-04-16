@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title>INDEX</title>
+  <script>
+    window.onload = function () {
+      var h1 = document.createElement('h1');
+      var textNode = document.createTextNode('Hello doc');
+      h1.appendChild(textNode);
+      document.body.appendChild(h1);
+      var img = document.createElement('img');
+      //img.src = 'img/yellow.jpg';
+      //img.alt = '노란거';
+      img.setAttribute('src', 'img/yellow.jpg');
+      img.setAttribute('alt', '노란거');
+      document.body.appendChild(img);
+    };
+  </script>
+</head>
+<body>
+  <h1>TEXT NODE</h1>
+  <img src="img/orange.jpg" alt="오렌지" />
+</body>
+</html>

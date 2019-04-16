@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    function arrayFun() {
+      // arguments : 매개변수 배열
+      if (arguments.length == 0) { //매개변수가 0개일 때 할 일
+        document.write('매개변수를 안 넣었구만<br>');
+      } else if (arguments.length == 1) { // 매개변수가 1개일 때 할 일
+        document.write('매개변수가 한개였네<br>');
+      } else if (arguments.length > 1) { // 매개변수가 2개 이상일 때 할 일
+        document.write('매개변수가 2개 이상이네<br>');
+        for (var i in arguments) {
+          document.write(arguments[i] + '  ');
+        }
+        document.write('값을 입력했구만<br>');
+      }
+    }
+    arrayFun(1, 2, 3);
+    arrayFun();
+    arrayFun(1);
+  </script>
+</head>
+<body>
+
+</body>
+</html>

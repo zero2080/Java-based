@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" name="viewport"
+        content="width=device-width, initial-scale=1.0, 
+        minimum-scale=1.0, user-scalable=no"/>
+  <title></title>
+  <style>
+    /* ★ ★ ★ 페이지 초기화 ★ ★ ★*/
+    *{margin:0; padding:0; font-family:'Segoe UI','Franklin Gothic';}
+    li{list-style:none;}
+    a {text-decoration:none;}
+    /* ★ ★ ★ header ★ ★ ★*/
+    #header {
+      background-image: url('imgEx1/bg_header.png');
+      height:45px; line-height:45px; text-align:center;
+      position:relative;
+    }
+    #header .left{position:absolute; left:10px; top:7px;} 
+    #header .right{position:absolute;right:10px; top:7px;}
+    /* ★ ★ ★ gnb 디자인과 toggle 연동 ★ ★ ★ */
+    #gnb ul {overflow:hidden; border:10px solid gray;}
+    #gnb ul li{float:left;
+      width:10%;
+      border:1px solid #cccccc;
+      box-sizing:border-box;
+      text-align:center;
+      margin:1.2%;
+    }
+    #gnb {display:none;}
+    #toggle:checked ~ #gnb {display:block;}
+    #toggle {display:none;}
+    /* ★ ★ ★ lnb ★ ★ ★ */
+    #lnb ul{overflow:hidden;}
+    #lnb ul li{float:left;
+      width:20%;
+      background-color:#137163; /* 진한 초록색 바탕색 */
+      border:1px solid white;
+      box-sizing:border-box;
+      height:60px; line-height:60px; text-align:center;
+      font-weight:bold;
+    }
+    #lnb ul li a {color:white;}
+    /* ★ ★ ★ #section ★ ★ ★ */
+    #section{ padding:10px; color:#333333;}
+    #section #section_body p:nth-child(1){
+      color:#3da4e8;
+      font-weight:bold;
+      font-size:1.1em;
+      padding: 10px 0;
+    }
+    #section #section_body p:nth-child(2){
+      /*background-image:url('imgEx1/bg_image.jpg');
+      background-repeat:no-repeat;
+      background-position: -600px 0;*/    
+      background:url('imgEx1/bg_image.jpg') no-repeat -600px 0;
+    }
+    /* ★ ★ ★ #footer ★ ★ ★ */
+    #footer{margin-top:10px; }
+    #footer .logo{
+      border-top:1px solid #cccccc;
+      border-bottom:1px solid #cccccc;
+      text-align:center;
+      padding:10px;
+    }
+    #footer .logo img {width:250px;}
+    #footer .info {
+      text-align:center; font-size:1.3em; 
+      padding: 10px 0;color:#515151;
+      font-weight:bold;
+    }
+    #footer .addr{text-align:center;}
+  </style>
+</head>
+<body>
+  <input type="checkbox" id="toggle" />
+  <header id="header">
+    <a class="left" href="#"><img src="imgEx1/category.png" /></a>
+    <h1>Mobile</h1>
+    <label class="right" for="toggle"><img src="imgEx1/menu.png" /></label>
+  </header>
+  <div id="gnb">
+    <ul>
+      <li><a href="#">gnb1</a></li>
+      <li><a href="#">gnb2</a></li>
+      <li><a href="#">gnb3</a></li>
+      <li><a href="#">gnb4</a></li>
+      <li><a href="#">gnb5</a></li>
+      <li><a href="#">gnb6</a></li>
+      <li><a href="#">gnb7</a></li>
+      <li><a href="#">gnb8</a></li>
+    </ul>
+  </div>
+  <div id="lnb">
+    <ul>
+      <li><a href="#">lnb1</a></li>
+      <li><a href="#">lnb2</a></li>
+      <li><a href="#">lnb3</a></li>
+      <li><a href="#">lnb4</a></li>
+      <li><a href="#">lnb5</a></li>
+    </ul>
+  </div>
+  <section id="section">
+    <div id="section_header">
+      <h1>웹표준</h1>
+      <hr />
+    </div>
+    <div id="section_body">
+      <p>성창오토텍은 납품을 주로 하는 자동차 부품 제조회사로 한온시스템, 현대모비스, 한국델파이, 만도를 비롯해 현대차미국법인 등에 납품하고 있다. </p>
+      <p>클러스터 이오나이저는 공조(공기조절)장치 내부에 이온 발생기를 장착해 에어콘 냄새 개선 및 실내 공기 청정 기능을 수행하는 공기정화장치다. 소이온들이 유해물질(암모니아)의 분자 중 H(수소분자)와 결합해 물(H2O)를 생성시키며 유해물질을 무독성의 물질로 변환시킨다</p>
+    </div>
+  </section>
+  <footer id="footer">
+    <div class="logo"><img src="https://t1.daumcdn.net/daumtop_chanel/op/20170315064553027.png" alt="회사로고" /></div>
+    <div class="info">더조은IT아카데미</div>
+    <div class="addr">서울시 종로구 삼일대로 17길 51</div>
+  </footer>
+</body>
+</html>

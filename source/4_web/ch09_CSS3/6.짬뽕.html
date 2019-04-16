@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script src="js/prefixfree.min.js"></script>
+  <style>
+    *{margin:0; padding:0;}
+    li{list-style:none;}
+    a{text-decoration:none;font-size:30px;}
+    #lnb{width:600px; height:300px; margin:50px auto;
+         border:1px solid gray;
+    }
+    #lnb ul li{float:left; width:118px; height:50px; line-height:50px;
+               text-align:center; 
+               background-color:lightseagreen;
+               border:1px solid green;
+    }
+    #lnb ul li:nth-child(1):hover{ 
+      background-color:red; transform:scale(2);
+      transform-origin:top center;
+    }
+    #lnb ul li:nth-child(1){transition-duration:3s; transition-delay:1s;}
+
+    #lnb ul li:nth-child(2):hover{
+      transform:skew(-20deg);
+    }
+    #lnb ul li:nth-child(2){transition-duration:3s;}
+
+    #lnb ul li:nth-child(3):hover{
+      transform:rotate(45deg);
+      transform-origin:bottom right;
+    }
+    #lnb ul li:nth-child(3){transition-delay:1s; transition-duration:3s;}
+
+    #lnb ul li:nth-child(4):hover{
+      animation-name:ani_lnb4;
+      animation-duration:3s;
+      animation-iteration-count:infinite;
+    }
+    @keyframes ani_lnb4{
+      from{transform:rotate(0deg);transform-origin:right top; }
+      to{transform:rotate(10deg);transform-origin:right top;
+         background-color:purple;
+      }
+    }
+    #lnb ul li:nth-child(5):hover{
+      animation-name:ani_lnb5;
+      animation-duration:3s;
+      animation-iteration-count:infinite;
+      animation-direction:alternate;
+    }
+    @keyframes ani_lnb5{
+      from{height:50px;}
+      to{  height:295px; background-color:yellow;}
+    }
+  </style>
+</head>
+<body>
+  <div id="lnb">
+    <ul>
+      <li><a href="#">lnb1</a></li>
+      <li><a href="#">lnb2</a></li>
+      <li><a href="#">lnb3</a></li>
+      <li><a href="#">lnb4</a></li>
+      <li><a href="#">lnb5</a></li>
+    </ul>
+  </div>
+</body>
+</html>

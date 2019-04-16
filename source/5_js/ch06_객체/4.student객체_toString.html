@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var student = {
+      name: '윤인성', kor: 90, mat: 95, eng: 91, sci: 97,
+      getSum: function () {
+        return this.kor + this.mat + this.eng + this.sci;
+      },
+      getAvg: function () {
+        return this.getSum() / 4;
+      },
+      toString: function () {
+        var output = '';
+        for (var key in this) {
+          if (key != 'getSum' && key != 'getAvg' && key != 'toString') {
+            output += key + ':' + this[key] + '<br>';
+          }
+        }
+        return output;
+      }
+    };
+    document.write(student);
+  </script>
+</head>
+<body>
+
+</body>
+</html>

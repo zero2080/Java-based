@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style></style>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#id').keyup(function(){
+				var id = $('#id').val();
+				$.ajax({
+					/* url  : 요청경로 (idConfirm.jsp)
+						 type : post / get
+						 data : 요청파라미터와 파라미터 값
+						 dataType : html / json / ... (요청경로를 실행하고 가져온 dataType)
+						 success : 요청경로를 실행한 응답이 성공일 경우 수행할 콜백함수
+						 error : 요청경로를 실행한 응답이 에러가 났을 경우 실행할 콜백함수
+					*/
+					url : 'idConfirm.jsp',
+					type : 'get',
+					data : 'id='+id,
+					dataType : 'html',
+					success : function(data){
+						$('span').html(data);
+					},
+					error : function(code){
+						alert(code.status);
+					}					
+				});
+			});
+			$('button').click(function(){
+				var id = $('#id').val();
+				$.ajax({
+					/* url  : 요청경로 (idConfirm.jsp)
+						 type : post / get
+						 data : 요청파라미터와 파라미터 값
+						 dataType : html / json / ... (요청경로를 실행하고 가져온 dataType)
+						 success : 요청경로를 실행한 응답이 성공일 경우 수행할 콜백함수
+						 error : 요청경로를 실행한 응답이 에러가 났을 경우 실행할 콜백함수
+					*/
+					url : 'idConfirm.jsp',
+					type : 'get',
+					data : 'id='+id,
+					dataType : 'html',
+					success : function(data){
+						$('span').html(data);
+					},
+					error : function(code){
+						alert(code.status);
+					}					
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>아이디 <input type="text" name="id" id="id">
+						<button>중복체크</button>
+	</p>
+	<span id="result">뭐가 있어</span>
+</body>
+</html>
+
+
+
+

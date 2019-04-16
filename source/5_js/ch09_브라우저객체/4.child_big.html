@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var s = 5;
+    setTimeout(function () { window.close() }, 5000);
+    window.onload = function () {
+      setInterval(function () {
+        s--;
+        document.body.innerHTML += '<p>' + s + '초후에 이 창이 닫아집니다</p>';
+      }, 1000);
+    };
+  </script>
+</head>
+<body>
+  <h1>큰그림의 child창</h1>
+  <img src="img/large.jpg" alt="큰그림" onclick="window.close();"/><br />
+  <button onclick="window.close();">닫기</button>
+</body>
+</html>

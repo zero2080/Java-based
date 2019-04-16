@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    #wrap{width:800px; margin:0 auto;}
+    #wrap #header { border-bottom:1px solid gray;}
+    #content ul li a {color:black; text-decoration:none;}
+    #content ul li a::after{
+      content: ' - ' attr(href);
+    }
+
+    #footer{ border-top:1px solid gray; }
+    #footer ul{overflow:hidden;}
+    #footer ul li{float:left; 
+        list-style:none;
+    }
+    #footer ul li:first-child img{
+      margin:15px 20px 0 20px; 
+    }
+    #content ul li.fa { /* ul li중에서 .fa만 디자인*/
+
+    }
+    #content ul li:not(.fa){ 
+      /* ul li중에서 .fa가 아닌 것만 디자인 = 부정선택자*/
+      background-color:red;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <h1>웹 사이트</h1>
+    </div>
+    <div id="content">
+      <ul>
+        <li><a href="http://www.naver.com">네이버</a></li>
+        <li><a href="http://www.daum.net">다음</a></li>
+        <li class="fa"><a href="http://www.google.com">구글</a></li>
+        <li><a href="http://www.nate.com">네이트</a></li>
+      </ul>
+    </div>
+    <div id="footer">
+      <ul>
+        <li><img src="logo.png" alt="고용노동부 로고" /></li>
+        <li><img src="address.png" alt="회사주소" /></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

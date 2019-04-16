@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var cnt = 1;
+    // 1초마다 화면에 시간을 출력(10초 타이머 중지)
+    var id = setInterval(function () {
+      document.write(cnt + '. ' + new Date() + '<br>');
+      cnt++;
+    }, 1000);
+    setTimeout(function () { clearInterval(id); }, 10000);
+  </script>
+</head>
+<body>
+
+</body>
+</html>

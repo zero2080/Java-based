@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" name="viewport"
+        content="width=device-width, initial_scale=1.0"/>
+  <title></title>
+  <style>
+    /* ★ ★ ★ 페이지 초기화 ★ ★ ★*/
+    *{margin:0; padding:0; font-family:'Segoe UI','Franklin Gothic';}
+    li{list-style:none;}
+    a {text-decoration:none;}
+    /* ★ ★ ★ header #logo_wrap ★ ★ ★ */
+    header {background-color:#ea8f00;}
+    header #logo_wrap{
+      height:50px; line-height:50px; text-align:center;
+      position:relative;
+    }
+    header #logo_wrap .left{position:absolute; left:10px; top:0;}
+    header #logo_wrap .right{position:absolute;right:10px;top:0;}
+    header #logo_wrap .logo {font-size:1.5em; font-weight:bold; color:white;}
+    /* ★ ★ ★ header #search ★ ★ ★ */
+    header #search{height:50px; position:relative;}
+    header #search input {
+      width:100%;
+      border:5px solid #ea8f00;
+      box-sizing:border-box;
+      font-size:1.2em;
+      height:50px; line-height:50px;
+      padding:5px 55px 5px 5px;
+      outline:none;
+    }
+    header #search img {position:absolute; right:0; top:0;}
+    /* ★ ★ ★ #lnb ★ ★ ★ */
+    #lnb ul{margin:7px 0; overflow:hidden;}
+    #lnb ul li{
+      float:left;
+      border-right:1px solid orange;
+      width:16.66666%;
+      box-sizing:border-box;
+      text-align:center;
+      font-size:1.2em; font-weight:bold;
+      height:30px; line-height:30px;
+    }
+    #lnb ul li:last-child {border:0;}
+    /* ★ ★ ★ section #section01 ★ ★ ★ */
+    section #section01 #row1, 
+    section #section01 #row2,
+    section #section01 #row3 {overflow:hidden;}
+    section #section01 #row1 div,
+    section #section01 #row2 div,
+    section #section01 #row3 div{
+      float:left; width:50%;
+      border:1px solid white;
+      box-sizing:border-box;
+      height:135px;
+    }
+    section #section01 div img{
+      width:100%; height:100%;
+    }
+    /* ★ ★ ★ section #section02 ★ ★ ★ */
+    section #section02 ul li{
+      padding:8px; border:1px solid gray;
+      /* 말줄임 태그(ellipsis) */
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+    /* ★ ★ ★ section #section03 ★ ★ ★ */
+    section #section03{ margin:10px 0;}
+    section #section03 ul li{
+      border:1px solid gray; overflow:hidden;padding:10px;
+      margin:2px 0;
+    }
+    section #section03 ul li p:first-child{
+      float:left; width:20%;
+      margin-right:3%
+    }
+    section #section03 ul li p:first-child img{
+      width:100%; height:100%;
+    }
+    section a{color:#303030;}
+    section #section03 ul li p:last-child{
+      /*float:left; width:77%;*/
+    }
+    section #section03 ul li p:last-child span:first-child{
+      color:darkblue; font-weight:bold; font-size:1.2em;
+      display:block;
+      /* 말줄임 태그(ellipsis) */
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+    section #section03 ul li p:last-child span:last-child{
+      font-size:.8em;
+    }
+    /* ★ ★ ★ footer ★ ★ ★ */
+    footer{background-color:#ea8f00;text-align:center;}
+    footer p:nth-child(1){padding:5px;}
+    footer p:nth-child(2){height:30px; line-height:20px;}
+  </style>
+</head>
+<body>
+  <header>
+    <div id="logo_wrap">
+      <!--logo 이미지와 myinfo 이미지-->
+      <a class="left" href="#"><img src="imgEx2/menu.png" /></a>
+      <a class="logo" href="#">mobile logo</a>
+      <a class="right" href="#"><img src="imgEx2/myinfo.png" /></a>
+    </div>
+    <div id="search">
+      <!--input 태그와 img(일정크기로 항상보이게)-->
+      <input type="text" />
+      <a href="#"><img src="imgEx2/search.png" /></a>
+    </div>
+  </header>
+  <div id="lnb">
+    <!--메뉴 6개 -->
+    <ul>
+      <li><a href="#">lnb1</a></li>
+      <li><a href="#">lnb2</a></li>
+      <li><a href="#">lnb3</a></li>
+      <li><a href="#">lnb4</a></li>
+      <li><a href="#">lnb5</a></li>
+      <li><a href="#">lnb6</a></li>
+    </ul>
+  </div>
+  <section id="section">
+    <div id="section01">
+      <!--3행 2열짜리 기사 사진(사진을 클릭하면 기사사이트로)-->
+      <div id="row1">
+        <div>
+          <a href="http://www.nocutnews.co.kr/news/5091708" target="_blank">
+          <img src="https://file2.nocutnews.co.kr/newsroom/image/2019/01/18/20190118070800379626_0_710_473.jpg" alt="1행1열" />
+          </a>
+        </div>
+        <div><a href="http://biz.heraldcorp.com/culture/view.php?ud=201901181041556001774_1" target="_blank"><img src="http://res.heraldm.com/phpwas/restmb_allidxmake.php?idx=5&simg=201901181041556001774_20190118104216_01.jpg" alt="1행2열" /></a></div>
+      </div>
+      <div id="row2">
+        <div><a href="http://biz.heraldcorp.com/culture/view.php?ud=201901181041556001774_1" target="_blank"><img src="http://res.heraldm.com/phpwas/restmb_allidxmake.php?idx=5&simg=201901181041556001774_20190118104216_01.jpg" alt="2행1열" /></a></div>
+        <div><a href="http://www.nocutnews.co.kr/news/5091708" target="_blank"><img src="https://file2.nocutnews.co.kr/newsroom/image/2019/01/18/20190118070800379626_0_710_473.jpg" alt="2행2열" /></a></div>
+      </div>
+      <div id="row3">
+        <div><a href="http://www.nocutnews.co.kr/news/5091708" target="_blank"><img src="https://file2.nocutnews.co.kr/newsroom/image/2019/01/18/20190118070800379626_0_710_473.jpg" alt="3행1열" /></a></div>
+        <div><a href="http://biz.heraldcorp.com/culture/view.php?ud=201901181041556001774_1" target="_blank"><img src="http://res.heraldm.com/phpwas/restmb_allidxmake.php?idx=5&simg=201901181041556001774_20190118104216_01.jpg" alt="3행2열" /></a></div>
+      </div>
+    </div>
+    <div id="section02">
+      <!--기사list들(말줄임 태그)-->
+      <ul>
+        <li><a href="http://sports.mk.co.kr/view.php?year=2019&no=37161">지난 17일 오후 첫 방송된 JTBC 예능프로그램 ‘너의 노래는’에서는 박효신과 정재일이 파리의 시골 마을 리옹에서 음악에 대한 이야기를 나눴다. </a></li>
+        <li><a href="http://sports.mk.co.kr/view.php?year=2019&no=37161">지난 17일 오후 첫 방송된 </a></li>
+        <li><a href="http://sports.mk.co.kr/view.php?year=2019&no=37161">지난 17일 오후 첫 방송된 JTBC 예능프로그램 ‘너의 노래는’에서는 박효신과 정재일이 파리의 시골 마을 리옹에서 음악에 대한 이야기를 나눴다. </a></li>
+        <li><a href="http://sports.mk.co.kr/view.php?year=2019&no=37161">지난 17일 오후 첫 방송된 JTBC 예능프로그램 ‘너의 노래는’에서는 박효신과 정재일이 파리의 시골 마을 리옹에서 음악에 대한 이야기를 나눴다. </a></li>
+      </ul>
+    </div>
+    <div id="section03">
+      <!--기사 사진과 기사 제목 내용이 li-->
+      <ul>
+        <li>
+          <p class="img"><img src="http://placehold.it/100x100" /></p>
+          <p class="txt">
+            <span>레바논은 2패와 골 득실 -4점을 기록 중이었기 때문에, 베트남의 16강 진출 확률이 높은 상황이었다.</span>
+            <span>하태경 바른미래당 의원은 박항서 감독이 이끄는 베트남 축구가 페어플레이 포인트로 아시안컵 16강에 극적으로 진출하게 된 것을 축하하며 작금의 정치권 파문을 비판했다.</span>
+          </p>
+        </li>
+        <li>
+          <p class="img"><img src="http://placehold.it/100x100" /></p>
+          <p class="txt">
+            <span>레바논은 2패와 골 득실 -4점을 기록 중이었기 때문에, 베트남의 16강 진출 확률이 높은 상황이었다.</span>
+            <span>하태경 바른미래당 의원은 박항서 감독이 이끄는 베트남 축구가 페어플레이 포인트로 아시안컵 16강에 극적으로 진출하게 된 것을 축하하며 작금의 정치권 파문을 비판했다.</span>
+          </p>
+        </li>
+        <li>
+          <p class="img"><img src="http://placehold.it/100x100" /></p>
+          <p class="txt">
+            <span>레바논은 2패와 골 득실 -4점을 기록 중이었기 때문에, 베트남의 16강 진출 확률이 높은 상황이었다.</span>
+            <span>하태경 바른미래당 의원은 박항서 감독이 이끄는 베트남 축구가 페어플레이 포인트로 아시안컵 16강에 극적으로 진출하게 된 것을 축하하며 작금의 정치권 파문을 비판했다.</span>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <footer id="footer">
+    <p><img src="imgEx2/logo.png" /></p>
+    <p>서울시 종로구 삼일대로 17길 51</p>
+  </footer>
+</body>
+</html>

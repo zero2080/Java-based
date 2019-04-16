@@ -1,0 +1,34 @@
+DROP TABLE MEMBER CASCADE CONSTRAINTS;
+CREATE TABLE MEMBER(
+    name VARCHAR2(20) NOT NULL,
+    id   VARCHAR2(20) PRIMARY KEY,
+    pw   VARCHAR2(20) NOT NULL,
+    phone1 VARCHAR2(10),
+    phone2 VARCHAR2(10),
+    phone3 VARCHAR2(10),
+    gender VARCHAR2(10));
+-- 1. 회원리스트
+SELECT * FROM MEMBER ORDER BY ID;
+
+-- 2. 회원가입시
+INSERT INTO MEMBER VALUES ('홍길동', 'aaa','111','02','9999','9999','남');
+COMMIT;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

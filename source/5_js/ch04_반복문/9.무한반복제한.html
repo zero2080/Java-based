@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    /* for문을 이용해서 사용자가 원할 때까지 무한반복 (몇번째 반복중인지 출력)*/
+    for (var cnt = 1; true; cnt++) {
+      alert(cnt + '번째 반복문 수행중');
+      if (!confirm('계속 수행할까요?')) {
+        break;
+      }
+    }
+  </script>
+</head>
+<body>
+  <script>document.write('<h2>for문 ' + cnt + '번 수행</h2>');</script>
+</body>
+</html>

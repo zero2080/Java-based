@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    /* prompt를 이용해서 국어, 영어 점수를 입력받아 총점과 평균을 출력
+     * 단, 국어, 영어 점수는 0~100점을 입력받을 때까지 계속 받는다. */
+    var kor, eng, nkor, neng, sum, avg;
+    do {
+      kor = prompt('국어점수(단, 0~100점)?');
+      if (kor == '')
+        continue;
+      nkor = Number(kor);
+      if (!isNaN(nkor) && nkor >= 0 && nkor <= 100)
+        break;
+    } while (true);
+    do {
+      eng = prompt('영어점수(단, 0~100점)?');
+      if (eng == '')
+        continue;
+      neng = Number(eng);
+      if (!isNaN(neng) && neng >= 0 && neng <= 100)
+        break;
+    } while (true);
+    sum = nkor + neng;
+    avg = sum / 2;
+    document.write('총점 = ' + sum + ' 평균=' + avg);
+  </script>
+</head>
+<body>
+</body>
+</html>

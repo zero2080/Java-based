@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style></style>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var clickCnt = 0;
+			$('h1').click(function(){
+				clickCnt++;
+				if(clickCnt>=6){
+					$(this).off(); // 별 5개 추가 이후에는 click 이벤트 제거
+				}else{
+					$(this).append('★ ');
+				}
+				
+			});
+		});
+	</script>
+	<script>
+		$(function(){
+			setInterval(function(){
+				//$('#h2').trigger('click');
+				$('h1').last().trigger('click'); // 마지막 h1태그의 click 강제발생
+			}, 2000);
+		});
+	</script>
+</head>
+<body>
+	<h1 id="h1">start1 : </h1>
+	<h1 id="h2">start2 : </h1>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

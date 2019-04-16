@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var toggle = 0;
+    function change() {
+      // HEADER <-> 바꿔
+      var head = document.getElementsByClassName('head');
+      if (toggle == 0) {
+        head[0].innerHTML = '바꿔';
+        head[1].innerHTML = '바꿔';
+        toggle = 1;
+      } else {
+        for (var idx = 0; idx < head.length; idx++) {
+          head[idx].innerHTML = 'HEADER';
+        }
+        toggle = 0;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1 class="head">HEADER</h1>
+  <h1 class="head">HEADER</h1>
+  <button onclick="change()">바꿔</button>
+  <input type="button" value="바꿔" onclick="change()"/>
+</body>
+</html>

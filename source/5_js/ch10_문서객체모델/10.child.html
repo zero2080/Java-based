@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    #wrap{width:400px; margin:20px auto;}
+    #wrap h1{text-align:center; color:red;}
+    #wrap h2{text-align:center;}
+    #wrap h3{width:200px; margin:10px auto;
+        border:1px solid red;
+        text-align:center;
+        padding:15px;
+        border-radius:10px;
+    }
+  </style>
+  <script>
+    window.onload = function () {
+      // opener : 이 화면을 호출한 parent 창
+      var name = opener.document.getElementById('name').value;
+      var date = opener.document.getElementById('date').value;
+      var showName = document.getElementById('showName');
+      var modifyName = document.getElementById('modifyName');
+      showName.innerHTML = name + ' / ';
+      if (date == '') {
+        showName.innerHTML += '날짜 안 넘어옴';
+      } else {
+        showName.innerHTML += date;
+      }
+      modifyName.value = name;
+    };
+    function sendData(part) {
+      var modifyName = document.getElementById('modifyName').value;
+      opener.document.getElementById('name').value = modifyName;
+      opener.document.getElementById('part').innerHTML = part;
+      this.close();
+    }    
+  </script>
+</head>
+<body>
+  <div id="wrap">
+    <h1>인사정보 시스템</h1>
+    <hr color="blue" />
+    <h2 id="showName"></h2>
+    <h2>이름수정가능 <input type="text" id="modifyName" /></h2>
+    <hr />
+    <h3 onclick="sendData('인사')">인사팀으로 닫기</h3>
+    <h3 onclick="sendData('재무')">재무팀으로 닫기</h3>
+    <h3 onclick="sendData('총무')">총무팀으로 닫기</h3>
+    <h3 onclick="sendData('기획')">기획팀으로 닫기</h3>
+  </div>
+</body>
+</html>

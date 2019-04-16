@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    input[type=text] {width:200px;}
+    input:focus {border: 2px solid green; padding: 10px; outline:none;}
+    input:enabled {color:green; font-weight:bold;}
+    input:disabled {color:blue; border:1px dashed gray;}
+  </style>
+</head>
+<body>
+  <!-- 반응선택자 :hover -->
+  <!-- 상태선택자 :focus , :enabled, :disabled-->
+  <div>
+    <form>
+      이 름 <input type="text" name="name" /><br />
+      아 뒤 <input type="text" name="id" /><br />
+      번 호 <input type="text" name="no" 
+                  value="930101-1" disabled="disabled"/><br />
+      <input type="submit" value="입력" />
+    </form>
+  </div>
+</body>
+</html>

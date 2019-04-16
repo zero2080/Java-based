@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		td {padding: 5px; text-align: center;}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('button').click(function(){
+				$.ajax({
+					url : 'stockOut.jsp',
+					type : 'get',
+					data : "pName="+$('#pName').val(),
+					datatype : 'html',
+					success : function(data){
+						$('span').html("<font color=red>"+data+"</font>");
+					},
+					error : function(code){
+						alert("예외발생 공사중입니다"+code.status);
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<table>
+		<caption>오늘의 예제</caption>
+		<tr><th>물건명</th>
+				<td><input type="text" id="pName">
+						<span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>
+				</td>
+		</tr>
+		<tr><td colspan="2">
+					<button>재고량 확인</button>
+				</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

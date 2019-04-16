@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    // 콜백함수 : 매개변수에 함수
+    function callTenTimes(callback) {
+      for (var i = 0; i < 10; i++) {
+        document.write(i + '번째 호출');
+        callback();
+      }
+    }
+    var fun = function () { document.write(' 함수호출<br>'); };
+    callTenTimes(fun);
+  </script>
+</head>
+<body>
+
+</body>
+</html>

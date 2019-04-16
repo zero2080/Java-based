@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var number = 273.5210332;
+    document.write('number=' + number + '<br>');
+    document.write('number.toExponential()=' +
+      number.toExponential(3) + '<br>');//지수형 표식(2.735e+2)
+    document.write('number.toFixed()=' +
+      number.toFixed(1) + '<br>'); // 고정소수점 표식(273.5)
+    document.write('number.toPrecision()=' +
+      number.toPrecision(5) + '<br>');//273.52
+    document.write('number.toPrecision()=' +
+      number.toPrecision(2) + '<br>');//2자리로 나타낼 수 없으면 지수형
+                              // 2.7e+2
+  </script>
+</head>
+<body>
+</body>
+</html>

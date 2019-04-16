@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    #header, #content, #footer{
+      width:1000px; margin:0 auto;
+      overflow:hidden;
+    }
+    .left{width:148px; height:150px;
+          background-color:lightgray;
+          border: 1px solid gray;
+          float:left;
+    }
+    .center{
+      width:698px; height:150px;
+      background-color:lightgray;
+      border: 1px solid gray;
+      float : left;
+    }
+    .right {
+      width: 148px;
+      height: 150px;
+      background-color: lightgray;
+      border: 1px solid gray;
+      float: left;
+    }
+    #header .left, #footer .right{
+      border-radius: 30px 0;
+    }
+    #header .center {
+      border-radius: 0 0 30px 30px;
+    }
+    #header .right, #footer .left{
+      border-radius: 0 30px;
+    }
+    #content .left{
+      height:300px;
+      border-radius:0 30px 30px 0;
+    }
+    #content .center {
+      height: 300px;
+      border-radius:30px;
+    }
+    #content .center #nav ul{overflow:hidden;}
+    #content .center #nav ul li{float:left;
+         list-style:none;font-size: 20px;
+         padding:20px;
+    }
+    #content li a {text-decoration:none; color:black;}
+    #content .center #academy {
+      clear:both;
+      padding:20px;
+      text-align:center;
+    }
+    #content .right {
+      height: 300px;
+      border-radius:30px 0 0 30px;
+    }
+    #content .right ol li:nth-child(9)~li,
+    #content .right ol li:nth-child(9)~li a{
+      color:violet;
+    }
+    #footer .center{
+      border-radius: 30px 30px 0 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <div class="left"></div>
+    <div class="center"></div>
+    <div class="right"></div>
+  </div>
+  <div id="content">
+    <div class="left"></div>
+    <div class="center">
+      <div id="nav">
+        <ul>
+          <li><a href="#none1">menu1</a></li>
+          <li><a href="#none2">menu2</a></li>
+          <li><a href="#none3">menu3</a></li>
+        </ul>
+      </div>
+      <div id="academy">
+        <h2>자바 개발자 양성과정</h2>
+        <p>본 과정은 좋다. 아주 좋다. 친구들 좋다</p>
+      </div>
+    </div>
+    <div class="right">
+      <ol>
+        <li><a href="2.태그선택자.html" target="_blank">태그</a></li>
+        <li><a href="3.전체선택자.html" target="_blank">전체(*)</a></li>
+        <li><a href="4.id선택자_class선택.html" target="_blank">id,class</a></li>
+        <li><a href="5.속성선택자.html" target="_blank">속성</a></li>
+        <li><a href="7.후손_자손선택자.html" target="_blank">후손,자손(>)</a></li>
+        <li><a href="8.동위선택자.html" target="_blank">동위</a></li>
+        <li><a href="9.반응선택자.html" target="_blank">반응</a></li>
+        <li><a href="11.상태선택자.html" target="_blank">상태</a></li>
+        <li><a href="12.구조선택자_수직메뉴.html" target="_blank">구조</a></li>
+        <li><a href="#none" target="_blank">문자</a></li>
+        <li><a href="#none" target="_blank">링크</a></li>
+        <li><a href="#none" target="_blank">부정</a></li>
+      </ol>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="left"></div>
+    <div class="center"></div>
+    <div class="right"></div>
+  </div>
+</body>
+</html>

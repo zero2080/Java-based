@@ -1,0 +1,103 @@
+﻿* { margin: 0; padding: 0;
+    font-family: 'Times New Roman',serif;
+}
+a{text-decoration:none;}
+li{list-style:none;} 
+/* 여기까지 페이지 초기화 */
+
+/* ★ ★ ★ ★ ★ hearder의 #header_nav ★ ★ ★ ★ ★ */
+header #header_nav{
+    width:100%; height:25px; line-height:25px;
+    background-color:#2d1152; /* 진한 보라색 배경 */
+    overflow:hidden;
+}
+header #header_nav .gnb{width:650px; margin-left:5px;
+                        /*float:left; */
+}
+/*header #header_nav .gnb ul {overflow:hidden;}*/
+header #header_nav .gnb ul li{
+    float:left; margin-right:15px; font-size:0.9em;
+}
+header #header_nav a {color:white;}
+header #header_nav .survivalFootball {float: right;}
+header #header_nav .survivalFootball img{width:15px;}
+
+/* ★ ★ ★ ★ ★ hearder의 #header_info ★ ★ ★ ★ ★ */
+header #header_info{width:1000px; margin:0 auto;overflow:hidden;}
+header #header_info .logo{
+    float:left;
+    margin-top:10px; /*margin:10px 0 0 0;*/
+}
+header #header_info .search{float:left;margin-top:20px;}
+header #header_info .search input:not(.btn_search){
+    border:1px solid #3488d9; width:400px;  
+    font-size:20px;   padding:5px;
+}
+header #header_info .search .btn_search {
+    width: 124px;  height: 37px;
+    /*background:url('../img/search_btn.png') no-repeat 0 0;*/
+    background-image:url('../img/search_btn.png');
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    border:0; padding:5px; color:white;
+    cursor:pointer;  /* 커서의 모양 변경 : a태그 모양처럼*/
+}
+header #header_info .service{float:right;margin-top:20px;}
+header #header_info .service ul li{float:left;margin-right:15px;}
+header #header_info .service ul li a{
+    display:block; padding:5px 10px; color:purple;
+    font-weight:bold; font-size:0.9em;
+}
+header #header_info .service ul li a:hover{
+    background-color:purple; color:white; border-radius:5px;
+}
+/* ★ ★ ★ ★ ★ #content ★ ★ ★ ★ ★ */
+#content{width:1000px; margin:20px auto 0;
+         overflow:hidden;
+}
+/* ★ ★ ★ ★ ★ #content의 #main_menu ★ ★ ★ ★ ★ */
+#content #main_menu{float:left; width:155px;}
+#content #main_menu ul li {
+    line-height:35px; padding-left:5px;
+}
+#content #main_menu ul li a{
+    font-size:1.2em;color:black;
+}
+/* ★ ★ ★ ★ ★ #content의 #main ★ ★ ★ ★ ★ */
+#content #main{float:left;width:600px;}
+#content #main div{width:600px;
+    border:1px solid gray; margin-top:3px;
+}
+#content #main div:nth-child(1){height:300px;}
+#content #main div:nth-child(2){height:150px;}
+#content #main div:nth-child(3){
+    height:50px; line-height:50px;
+    background-color:#500095;
+}
+#content #main div:nth-child(3) ul li{float:left; margin:0 20px;}
+#content #main div:nth-child(3) a{color:white;}
+#content #main div:nth-child(4),
+#content #main div:nth-child(5),
+#content #main div:nth-child(6),
+#content #main div:nth-child(7){height:100px;}
+
+/* ★ ★ ★ ★ ★ #content의 #main_banner ★ ★ ★ ★ ★ */
+#content #main_banner{float:left;width:230px;}
+#content #main_banner div{
+    width:230px; border:1px solid gray;
+    margin:3px 0 0 5px; /*상 우 하 좌*/
+}
+#content #main_banner div:nth-child(1),
+#content #main_banner div:nth-child(2){height:100px;}
+#content #main_banner div:nth-child(3),
+#content #main_banner div:nth-child(4){height:150px;}
+#content #main_banner div:nth-child(5){height:200px;}
+
+/* ★ ★ ★ ★ ★ footer ★ ★ ★ ★ ★ */
+footer{width:1000px; margin:3px auto 0;
+       height:100px; border:1px solid gray;
+}
+footer ul{overflow:hidden;}
+footer ul li{float:left;}
+footer ul li:first-child{margin:30px 0 0 200px;}
+footer ul li:last-child{margin:15px;}

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    function Student(name, kor, eng) {
+      this.name = name;
+      this.kor = kor;
+      this.eng = eng;
+    }
+    Student.prototype.getSum = function () {
+      return this.kor + this.eng;
+    };
+    Student.prototype.toString = function () {
+      return this.name + ' ' + this.kor + ' ' + this.getSum() + '<br>';
+    };
+    var students = [];
+    students.push(new Student('홍길동', 99, 20));
+    students.push(new Student('김길동', 99, 22));
+    students.push(new Student('마길동', 55, 20));
+    students.push(new Student('박길동', 99, 82));
+    students.push(new Student('신길동', 57, 81));
+    students.push(new Student('윤길동', 99, 43));
+    document.write('<h2>sort전</h2>이름  국어  총점<br>');
+    students.forEach(function (data, idx) {
+      document.write(data);
+    });
+    var sortedStudents = students;
+    sortedStudents.sort(function (left, right) {
+      return right.getSum() - left.getSum();
+    });
+    document.write('<h2>sort후</h2>이름  국어  총점<br>');
+    sortedStudents.forEach(function (data, idx) {
+      document.write(data);
+    });
+    document.write('<h2>1~5등까지(0~4인덱스까지)</h2>이름  국어  총점<br>');
+    sortedStudents.slice(0, 5).forEach(function (data) {
+      document.write(data);
+    });
+  </script>
+</head>
+<body>
+
+</body>
+</html>

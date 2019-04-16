@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	fieldset {width:500px; margin: 10px auto;}
+	input[type='submit']{margin-left: 10px;}
+</style>
+</head>
+<body>
+		<fieldset>
+			<legend>배경색 선택(GET방식)</legend>
+				<form action="../Ex5" method="get">			
+					빨강<input type="radio" name="backColor" value="red">
+					주황<input type="radio" name="backColor" value="orange">
+					노랑<input type="radio" name="backColor" value="yellow">
+					초록<input type="radio" name="backColor" value="green">
+					파랑<input type="radio" name="backColor" value="blue">
+					남색<input type="radio" name="backColor" value="navy">
+					보라<input type="radio" name="backColor" value="violet">
+					<input type="submit" value="선택확인">
+				</form>
+		</fieldset>
+		<fieldset>
+			<legend>배경색 선택(POST방식)</legend>
+				<form action="../Ex5" method="post">			
+					빨강<input type="radio" name="backColorIdx" value="0">
+					주황<input type="radio" name="backColorIdx" value="1">
+					노랑<input type="radio" name="backColorIdx" value="2">
+					초록<input type="radio" name="backColorIdx" value="3">
+					파랑<input type="radio" name="backColorIdx" value="4">
+					남색<input type="radio" name="backColorIdx" value="5">
+					보라<input type="radio" name="backColorIdx" value="6">
+					<input type="submit" value="선택확인">
+				</form>
+		</fieldset>
+</body>
+</html>

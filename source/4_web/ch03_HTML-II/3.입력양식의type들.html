@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+</head>
+<body>
+  <form>
+    <p>아 이 디 <input type="text" name="id"/>
+               <input type="button" value="중복확인"/>
+    </p>
+    <p>비밀번호 <input type="password" name="pw" /></p>
+    <p>전화번호 <input type="text" name="tel1" size="4"/>-
+            <input type="text" name="tel2" size="4"/> - 
+            <input type="text" name="tel3" size="4"/>
+    </p>
+    <p>증명사진 <input type="file" name="filename" /></p>
+    <p>성별선택 <input type="radio" name="gender" value="m"/>남
+                <input type="radio" name="gender" value="f"/>여
+    </p>
+    <p>사용언어 <input type="checkbox" name="lang" value="kor" />한국어
+                <input type="checkbox" name="lang" value="eng" />영어
+                <input type="checkbox" name="lang" value="chi" />중국어
+                <input type="checkbox" name="lang" value="ind" />힌두어
+    </p>
+    <p>자기소개 <textarea name="info" rows="5" cols="10"></textarea></p>
+    <p>국적선택 <select name="nation">
+                    <option value="kor">대한민국</option>
+                    <option value="usa">미국</option>
+                    <option value="cha">중국</option>
+                </select>
+    </p>
+    <p>좋은음식 <select multiple="multiple" name="food" size="3">
+                    <option>김치찌개</option>
+                    <option>된장찌개</option>
+                    <option>부대찌개</option>
+                    <option>순두부찌개</option>
+                    <option>섞어찌개</option>
+                </select>
+    </p>
+    <p>좋은색상 <input type="color" name="color" /></p>
+    <p>좋은정도 <input type="range" name="step" min="0" max="100" step="10" /></p>
+    <p>홈페이지 <input type="url" name="homepy" /></p>
+    <p>이 메 일 <input type="email" name="mail" /></p>
+    <p>생년월일 <input type="date" name="birth" /></p>
+    <p><input type="submit" /></p>
+  </form>
+</body>
+</html>

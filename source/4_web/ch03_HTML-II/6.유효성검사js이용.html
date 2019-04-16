@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+      function chk() {
+          if (frm.id.value.length <= 3) {
+              alert("아이디는 4글자 이상이여야 합니다");
+              frm.id.focus();
+              return false;
+          }
+          if (!frm.pw.value) {
+              alert("비밀번호를 입력하세요");
+              frm.pw.focus();
+              return false;
+          }
+          if (frm.pw.value != frm.pwchk.value) {
+              alert("비밀번호를 확인하세요");
+              frm.pw.value = "";
+              frm.pwchk.value = "";
+              frm.pw.focus();
+              return false;
+          }
+          return true;
+      }
+  </script>
+</head>
+<body>
+  <form action="http://www.naver.com" name="frm" onsubmit="return chk()">
+    <p>ID : <input type="text" name="id"/></p>
+    <p>PW : <input type="password" name="pw" /></p>
+    <p>PW체크 : <input type="password" name="pwchk" /></p>
+    <center><input type="submit" value="가입" /></center>
+  </form>
+</body>
+</html>

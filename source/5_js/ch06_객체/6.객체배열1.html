@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    var students = [];
+    students.push({ name: '윤인성', kor: 87, mat: 90, eng: 88, sci: 66 });
+    students.push({ name: '홍길동', kor: 75, mat: 90, eng: 52, sci: 66 });
+    students.push({ name: '신길동', kor: 66, mat: 90, eng: 88, sci: 44 });
+    students.push({ name: '김길동', kor: 90, mat: 43, eng: 27, sci: 66 });
+    students.push({ name: '유상둥', kor: 26, mat: 90, eng: 88, sci: 44 });
+    for (var i = 0; i < students.length; i++) {
+      students[i].getSum = function () {
+        return this.kor + this.mat + this.eng + this.sci;
+      };
+      students[i].getAvg = function () {
+        return this.getSum() / 4;
+      };
+      students[i].toString = function () {
+        return this.name + '\t' + this.getSum() + '\t' + this.getAvg() + '\n';
+      };
+    }
+    // 객체 배열 students 출력(메세지 창에)
+    var output = '이름\t총점\t평균\n';
+    students.forEach(function (data, idx) {
+      //output += data.toString();
+      output += students[idx].toString();
+    });
+    alert(output);
+  </script>
+</head>
+<body>
+</body>
+</html>

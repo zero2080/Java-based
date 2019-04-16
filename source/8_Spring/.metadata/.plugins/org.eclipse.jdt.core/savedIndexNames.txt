@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+D:\mega_IT\source\8_Spring\.metadata\.plugins\org.eclipse.jdt.core

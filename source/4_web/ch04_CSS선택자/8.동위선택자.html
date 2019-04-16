@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    h2~div {
+      font-size: 20px; color:orange;
+    }
+    h2+div { /* h2 태그 바로 다음에 나오는 동위 div */
+      color:blue; font-weight:bold;
+    }
+  </style>
+</head>
+<body>
+  <div>실험</div>
+  <h2 id="title">동위선택자(+:하나만, ~:다)</h2>
+  <div>div_01</div>
+  <p>p_01</p>
+  <div>div_02</div>
+  <div>div_03</div>
+  <div>div_04</div>
+  <div>div_05</div>
+</body>
+</html>

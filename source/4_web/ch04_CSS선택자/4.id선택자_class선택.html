@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    #header{width:600px; border:2px solid gray;
+            background-color: #ffd800;
+            text-align:center;
+    }
+    #wrap{ width:600px; border:2px dashed gray;
+           text-align:center;
+           background-color:aqua;
+           overflow: hidden;/**/
+    }
+    #content{width:320px; border:1px solid red; float:left;/**/}
+    #side_banner{width:150px; border:1px solid black; float:left;/**/ }
+    .menu1 {color:blue; font-weight:bold;}
+    .menu2 {color:red;}
+    .bannerimg{width:200px;}
+    #footer{
+        clear:both;
+        width:60px; border:2px solid gray;
+        background-color: #ffd800;
+        text-align:center;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1>HEADER</h1>
+  </div>
+  <div id="wrap">
+    <div id="content">
+      <h2>CONTENT</h2>
+      <ul>
+        <li class="menu1">menu1</li>
+        <li class="menu2">menu2</li>
+        <li class="menu1">menu3</li>
+        <li class="menu2">menu4</li>
+        <li class="menu1">menu5</li>
+      </ul>
+    </div>
+    <div id="side_banner">
+      <h2>BANNER</h2>
+      <img class="bannerimg" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="구글"/>
+    </div>
+  </div>
+  <div id="footer">
+    <h1>FOOTER</h1>
+  </div>
+</body>
+</html>

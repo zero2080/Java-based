@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    table {
+      width: 600px;
+      margin: 20px auto;
+      background-color: darkgreen;
+    }
+
+    td {
+      background-color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 2em;
+    }
+  </style>
+  <script>
+    window.onkeyup = function () {
+      // 1:97 ~ 9:105 (오른편 숫자키보드) yellow
+      // 1:49 ~ 9:57(윗편 숫자 키보드) red
+      if (event.keyCode >= 97 && event.keyCode <= 105) {
+        // td들을 white로 backgroundColor
+        var tds = document.getElementsByTagName('td');
+        for (var idx = 0; idx < tds.length; idx++) {
+          tds[idx].style.backgroundColor = 'white';
+        }
+        // 해당 숫자의 td의 backgroundColor를 yellow
+        tds[event.keyCode - 97].style.backgroundColor = 'yellow';
+      }
+      if (event.keyCode >= 49 && event.keyCode <= 57) {
+        // td들을 white로 backgroundColor
+        var tds = document.getElementsByTagName('td');
+        for (var idx = 0; idx < tds.length; idx++) {
+          tds[idx].style.backgroundColor = 'white';
+        }
+        // 해당 숫자의 td의 backgroundColor를 yellow
+        tds[event.keyCode - 49].style.backgroundColor = 'red';
+      }
+    };
+  </script>
+</head>
+<body>
+  <table>
+    <tr><td>1</td><td>2</td><td>3</td></tr>
+    <tr><td>4</td><td>5</td><td>6</td></tr>
+    <tr><td>7</td><td>8</td><td>9</td></tr>
+  </table>
+</body>
+</html>

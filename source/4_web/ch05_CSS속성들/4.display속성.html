@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    *{margin:0; padding:0;}
+    div {width:100px; height:100px;border:1px solid gray;text-align:center;}
+    div:nth-child(1){margin:10px;}
+    div:nth-child(2){margin:10px; padding:10px;}
+    div:nth-child(3){background-color:red;}
+    div:nth-child(4){display:inline;margin:10px;/*inline은 좌우margin만*/}
+    div:nth-child(5){display:inline;}
+    div:nth-child(6){}
+    div:nth-child(7){display:inline-block;margin:10px;}/*inline처럼한줄에.*/
+    div:nth-child(8){display:none;} /*화면에서 공간도 사라짐 */
+    div:nth-child(9){display:inline-block;margin:10px; padding:10px;}
+  </style>
+</head>
+<body>
+  <div>BLOCK1</div><div>BLOCK2</div><div>BLOCK3</div>
+  <div>inline4</div><div>inline5</div><div>block6</div>
+  <div>inline-block7</div><div>content8</div><div>inline-block9</div>
+</body>
+</html>

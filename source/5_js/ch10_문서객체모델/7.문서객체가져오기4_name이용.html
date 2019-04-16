@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>p{text-align:center;}</style>
+  <script>
+    function login() {
+      var id = document.getElementsByName('id')[0];
+      var pw = document.getElementsByName('pw')[0];
+      var result = document.getElementById('result');
+      result.innerHTML = '입력하신 id는 ' + id.value
+              + '/ 입력하신 pw는 ' + pw.value;
+      alert('입력하신 id는 ' + id.value
+              + '/ 입력하신 pw는 ' + pw.value);
+    }
+  </script>
+</head>
+<body>
+  <p>ID <input type="text" name="id" /></p>
+  <p>PW <input type="password" name="pw" /></p>
+  <p><input type="button" value="로그인" onclick="login()" /></p>
+  <p id="result"></p>
+</body>
+</html>
