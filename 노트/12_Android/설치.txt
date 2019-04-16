@@ -1,0 +1,5 @@
+크롬을 통해 다음의 사이트에서 
+"DOWNLOAD ANDROID STUDIO" 클릭하여 다운로드
+
+https://developer.android.com/studio
+

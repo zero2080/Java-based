@@ -1,0 +1,7 @@
+1. pom.xml / web.xml / 폴더카피 / index.jsp
+    property파일 카피
+2. sql - init.sql + mappers.sql, model작성
+3. config.xml + 각종 mappers들 작성
+4. dao작성 , service
+5. service
+6. controller

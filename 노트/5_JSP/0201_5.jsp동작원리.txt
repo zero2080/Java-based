@@ -1,0 +1,14 @@
+0. 이클립스에서 jsp작업하고 실행시킬 때 동작원리
+소스 : D:\mega_IT\source\6_JSP\ch05_jsp\WebContent\lec1_teg
+
+톰캣이 실행하려고 하는 폴더 : D:\mega_IT\IDE\apache-tomcat-8.5.37\wtpwebapps\ch05_jsp\lec1_teg\a.jsp
+
+톰캣이 jsp를 서블릿으로 바꾸는 work : D:\mega_IT\IDE\apache-tomcat-8.5.37\work\Catalina\localhost\ch05_jsp\org\apache\jsp\lec1_005fteg\a_jsp.java
+
+
+0. ch04_servlet 웹프로젝트를 톰캣의 webapps/XX폴더에 실행가능한 셋업
+1. ch04_servlet/WebContent 밑에 있는 모든 폴더를 XX/밑에 복사
+2. ch04_servlet/build밑에 있는 classes 폴더를 XX/WEB-INF밑에 통복사
+3. 톰캣을 재부팅
+
+http://localhost:8181/XX

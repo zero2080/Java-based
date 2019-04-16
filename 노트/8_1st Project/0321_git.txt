@@ -1,0 +1,15 @@
+첫업로드시
+git init
+git add .
+git config --global user.email "본인이메일"
+git config --global user.name "Soyoung-Yi"
+git commit -m "first"
+git remote add origin https://github.com/XX/저장소이름.git
+git push -u origin master
+
+두번째 업로드부터
+git init
+git add .
+git commit -am "first commit"
+git remote add origin https://github.com/XX/저장소이름.git
+git push -u origin master

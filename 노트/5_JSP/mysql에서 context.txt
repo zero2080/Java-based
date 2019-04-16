@@ -1,0 +1,27 @@
+버젼 차이가 있는것 같네요..
+
+참고 하셔요
+
+-----------------------------------------------------
+
+META-INT/context.xml
+
+-----------------------------------------------------
+
+
+ <?xml version="1.0" encoding="UTF-8"?>
+<Context>
+<Resource 
+name="jdbc/mysql" 
+auth="Container" 
+type="javax.sql.DataSource" 
+driverClassName="com.mysql.jdbc.Driver" 
+url="jdbc:mysql://localhost:3306/ch20?useUnicode=true&amp;characterEncoding=euckr" 
+username="root" 
+password="mysql" 
+maxWait="5000" 
+maxActive="100" 
+maxIdel="30" 
+factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+closeMethod="close"/>
+</Context>

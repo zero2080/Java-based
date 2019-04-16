@@ -1,0 +1,17 @@
+css/footer.css
+css/join.css
+css/login.css
+member/footer.jsp
+member/header.jsp
+member/join.jsp
+member/joinPro.jsp
+member/login.jsp
+member/loginPro.jsp
+member/logout.jsp
+member/main.jsp
+img/실행화면1.png(ppt#1참조)
+img/실행화면2.png(ppt#2참조)
+img/실행화면3.png(ppt#3참조)
+img/실행화면4.png(ppt#4참조)
+
+위의 파일을 압축하여 메일로 제출합니다

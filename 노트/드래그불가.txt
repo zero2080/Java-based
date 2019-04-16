@@ -1,0 +1,14 @@
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function(){
+			
+			/* $('body').click(function(){
+				if(event.button==0){
+					alert('복사안되요');
+				}
+			}); */
+		});
+	</script>
+
+<body oncontextmenu="return false" 
+ondragstart="return false" onselectstart="return false">

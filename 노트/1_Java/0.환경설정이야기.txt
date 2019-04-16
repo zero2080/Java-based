@@ -1,0 +1,7 @@
+C:\Program Files\Java\jdk1.8.0_191\bin
+
+JAVA_HOME환경변수
+="C:\Program Files\Java\jdk1.8.0_191"
+
+Path추가할 내용
+;%JAVA_HOME%\bin
